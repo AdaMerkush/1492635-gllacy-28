@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="keyword" content="">
     <meta name="description" content="">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Gllacy</title>
   </head>
@@ -42,9 +42,30 @@
         </ul>
       </nav>
       <div>
-        <span>Поиск</span>
-        <span>Вход</span>
-        <span>Корзина</span>
+        <button>
+          <img src="./img/search.svg" width="16" height="16" alt="поиск по сайту">
+        </button>
+        <form form action="https://echo.htmlacademy.ru/courses" method="get">
+          <input type="text" placeholder="Крем-брюле">
+        </form>
+        <button type="button">
+          <img src="./img/enter-icon.svg" width="20" height="19" alt="вход в личный кабинет">
+          Вход
+        </button>
+        <form action="https://echo.htmlacademy.ru/courses" method="get">
+          <fieldset>
+            <legend class="visually-hidden">поле авторизации</legend>
+            <input type="email">
+            <input type="password">
+            <input type="submit" value="войти">
+            <a href="#nowhere">Забыли пароль?</a>
+            <a href="#nowhere">Новая регистрация</a>
+          </fieldset>
+        </form>
+        <button>
+          <img src="./img/basket-icon.svg" alt="корзина с покупками">
+          Пусто
+        </button>
       </div>
       <div>
         <p>с 10 до 20, ежедневно</p>
@@ -69,6 +90,18 @@
           <img src="./img/Group-3.png" width="647" height="584" alt="специальное предложение на 2 порции мороженного">
           <a>Давайте оба!</a>
         </div>
+      </section>
+      <section>
+        <form action="https://echo.htmlacademy.ru/courses" method="post">
+          <fieldset>
+            <legend>Мы обязательно вам ответим!</legend>
+            <input type="text" placeholder="Имя Фамилия">
+            <button type="reset">x</button>
+            <input type="email" placeholder="email@example.com">
+            <textarea name="wishes" id="" cols="30" rows="10">В свободной форме</textarea>
+            <input type="submit" value="Отправить">
+          </fieldset>
+        </form>
       </section>
       <section>
         <h2>Специальное предложение</h2>

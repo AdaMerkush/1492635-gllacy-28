@@ -49,7 +49,7 @@
         </button>
         <form form action="https://echo.htmlacademy.ru/courses" method="get">
           <label for="main-search-form" class="visually-hidden"></label>
-          <input type="text" placeholder="Крем-брюле" id="main-search-form">
+          <input type="text" placeholder="Крем-брюле" id="main-search-form" name="mainSearch">
         </form>
         <button type="button">
           <img src="./img/enter-icon.svg" width="20" height="19" alt="вход в личный кабинет">
@@ -59,9 +59,9 @@
           <fieldset>
             <legend class="visually-hidden">поле авторизации</legend>
             <label for="main-email-form" class="visually-hidden">Электронная почта</label>
-            <input type="email" placeholder="email@example.com" id="main-email-form">
+            <input type="email" placeholder="email@example.com" id="main-email-form" name="mainEmail">
             <label for="main-password-form" class="visually-hidden">Пароль</label>
-            <input type="password" id="main-password-form">
+            <input type="password" id="main-password-form" name="mainPassword">
             <input type="submit" value="войти">
             <a href="#nowhere">Забыли пароль?</a>
             <a href="#nowhere">Новая регистрация</a>
@@ -101,12 +101,12 @@
           <fieldset>
             <legend aria-label="поле авторизации и регистрации">Мы обязательно вам ответим!</legend>
             <label for="contact-field-name" class="visually-hidden">имя и фамилия</label>
-            <input type="text" placeholder="Имя Фамилия" id="contact-field-name">
+            <input type="text" placeholder="Имя Фамилия" id="contact-field-name" name="contactName">
             <button type="reset" aria-label="закрыть окно диалога">x</button>
             <label for="contact-field-password" class="visually-hidden">пароль</label>
-            <input type="email" placeholder="email@example.com" id="contact-field-password">
+            <input type="email" placeholder="email@example.com" id="contact-field-password" name="contactPassword">
             <label for="contact-text-field" class="visually-hidden">Введите сообщение</label>
-            <textarea name="wishes" id="contact-text-field" cols="30" rows="10">В свободной форме</textarea>
+            <textarea name="contactWishes" id="contact-text-field" cols="30" rows="10">В свободной форме</textarea>
             <input type="submit" value="Отправить">
           </fieldset>
         </form>
@@ -203,8 +203,8 @@
           Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
         </p>
         <form action="https://echo.htmlacademy.ru/courses" method="get">
-          <label for="subscribe-field" class="visually-hidden">Подписка на рассылку</label>
-          <input type="email" placeholder="email@example.com" id="subscribe-field">
+          <label for="subscribe-field-email" class="visually-hidden">Подписка на рассылку</label>
+          <input type="email" placeholder="email@example.com" id="subscribe-field-email" name="subscribeEmail">
           <input type="submit" value="Отправить">
         </form>
       </section>

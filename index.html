@@ -10,7 +10,7 @@
   </head>
   <body>
     <header>
-      <a aria-label="главная страница">
+      <a>
         <img src="./img/logo.svg" width="154" height="64" alt="logo">
       </a>
       <nav>
@@ -47,7 +47,7 @@
         <button>
           <img src="./img/search.svg" width="16" height="16" alt="поиск по сайту">
         </button>
-        <form form action="https://echo.htmlacademy.ru/courses" method="get">
+        <form action="https://echo.htmlacademy.ru/courses" method="get">
           <label for="main-search-form" class="visually-hidden"></label>
           <input type="text" placeholder="Крем-брюле" id="main-search-form" name="mainSearch">
         </form>
@@ -62,7 +62,7 @@
             <input type="email" placeholder="email@example.com" id="main-email-form" name="mainEmail">
             <label for="main-password-form" class="visually-hidden">Пароль</label>
             <input type="password" id="main-password-form" name="mainPassword">
-            <input type="submit" value="войти">
+            <button type="submit">войти</button>
             <a href="#nowhere">Забыли пароль?</a>
             <a href="#nowhere">Новая регистрация</a>
           </fieldset>
@@ -95,21 +95,6 @@
           <img src="./img/Group-3.png" width="647" height="584" alt="специальное предложение на 2 порции мороженного">
           <a href="#nowhere">Давайте оба!</a>
         </div>
-      </section>
-      <section>
-        <form action="https://echo.htmlacademy.ru/courses" method="post">
-          <fieldset>
-            <legend aria-label="поле авторизации и регистрации">Мы обязательно вам ответим!</legend>
-            <label for="contact-field-name" class="visually-hidden">имя и фамилия</label>
-            <input type="text" placeholder="Имя Фамилия" id="contact-field-name" name="contactName">
-            <button type="reset" aria-label="закрыть окно диалога">x</button>
-            <label for="contact-field-password" class="visually-hidden">пароль</label>
-            <input type="email" placeholder="email@example.com" id="contact-field-password" name="contactPassword">
-            <label for="contact-text-field" class="visually-hidden">Введите сообщение</label>
-            <textarea name="contactWishes" id="contact-text-field" cols="30" rows="10">В свободной форме</textarea>
-            <input type="submit" value="Отправить">
-          </fieldset>
-        </form>
       </section>
       <section>
         <h2 class="visually-hidden">Специальное предложение</h2>
@@ -225,22 +210,22 @@
     <footer>
       <ul>
         <li>
-          <a href="#nowhere">
+          <a href="#nowhere" aria-label="страница Gllacy на facebook">
             <img src="./img/footer-fb-icon.svg" width="32" height="32" alt="">
           </a>
         </li>
         <li>
-          <a href="#nowhere">
+          <a href="#nowhere" aria-label="страница Gllacy в контакте">
             <img src="./img/footer-vk-icon.svg" width="32" height="32" alt="">
           </a>
         </li>
         <li>
-          <a href="#nowhere">
+          <a href="#nowhere" aria-label="страница Gllacy в instagram">
             <img src="./img/footer-inst-icon.svg" width="32" height="32" alt="">
           </a>
         </li>
         <li>
-          <a href="#nowhere">
+          <a href="#nowhere" aria-label="страница Gllacy в twitter">
             <img src="./img/footer-twit-icon.svg" width="32" height="32" alt="">
           </a>
         </li>
@@ -263,8 +248,23 @@
         <a href="https://htmlacademy.ru/intensive/htmlcss" title="Онлайн‑курс HTML и CSS. Профессиональная вёрстка сайтов">
           <img src="./img/footer-avtor-logo.svg" width="108" height="39" alt="html-academy">
         </a>
-          <p>Сделано в HTML Academy © 2019</p>
+          <p>Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> © 2019</p>
       </div>
     </footer>
+    <section>
+      <form action="https://echo.htmlacademy.ru/courses" method="post">
+        <fieldset>
+          <legend aria-label="поле авторизации и регистрации">Мы обязательно вам ответим!</legend>
+          <label for="contact-field-name" class="visually-hidden">имя и фамилия</label>
+          <input type="text" placeholder="Имя Фамилия" id="contact-field-name" name="contactName">
+          <button type="reset" aria-label="закрыть окно диалога">x</button>
+          <label for="contact-field-password" class="visually-hidden">пароль</label>
+          <input type="email" placeholder="email@example.com" id="contact-field-password" name="contactPassword">
+          <label for="contact-text-field" class="visually-hidden">Введите сообщение</label>
+          <textarea name="contactWishes" id="contact-text-field" cols="30" rows="10">В свободной форме</textarea>
+          <button type="submit">Отправить</button>
+        </fieldset>
+      </form>
+    </section>
   </body>
 </html>

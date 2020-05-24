@@ -59,10 +59,10 @@
       </div>
       <section>
         <h2 class="visually-hidden">список покупок</h2>
-        <table width="539">
+        <table>
           <tr>
             <td>
-              <input type="reset" value="x">
+              <button type="reset" aria-label="удалить товар из корзины">X</button>
             </td>
             <td>
               <img src="./img/catalog-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
@@ -74,7 +74,7 @@
           </tr>
           <tr>
             <td>
-              <input type="reset" value="x">
+              <button type="reset" aria-label="удалить товар из корзины">X</button>
             </td>
             <td>
               <img src="./img/catalog-3.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
@@ -89,7 +89,7 @@
             <td>750 руб.</td>
           </tr>
         </table>
-        <input type="submit" value="Оформить заказ">
+        <button type="submit">Оформить заказ</button>
       </section>
       <div>
         <p>с 10 до 20, ежедневно</p>
@@ -114,8 +114,6 @@
           <legend class="visually-hidden">фильтры товара</legend>
           <label for="sort-filter">Сортировка:</label>
           <div>
-            <input type="button" value="по популярности">
-            <br>
             <select name="sort" id="sort-filter">
               <option value="popular">по популярности</option>
               <option value="cheap">сначала недорогие</option>
@@ -124,11 +122,11 @@
             </select>
           </div>
           <label for="price-filter">Цена: 100 ₽ – 500 ₽</label>
-          <input type="range" name="price" id="price-filter" min="100" max="500">
+          <input type="range" name="price" id="price-filter" min="100" max="500" step="10">
           <div>
             <p>Жирность:</p>
             <input name="fat" value="0%" id="zero-fat-filter" type="radio">
-            <label id="zero-fat-filter" for="zero-fat-filter">0%</label>
+            <label for="zero-fat-filter">0%</label>
             <input name="fat" value="до 10%" id="10-fat-filter" type="radio" checked>
             <label for="10-fat-filter">до 10%</label>
             <input name="fat" value="до 30%" id="30-fat-filter" type="radio">
@@ -144,14 +142,12 @@
             <label for="shugar-filler-filter">сахарные присыпки</label>
             <input type="checkbox" name="filler" id="fruit-filler-filter" value="fruit-filler">
             <label for="fruit-filler-filter">фрукты</label>
-            <input type="checkbox" name="filler" id="fruit-filler-filter" value="fruit-filler">
-            <label for="fruit-filler-filter">фрукты</label>
             <input type="checkbox" name="filler" id="sirop-filler-filter" value="sirop-filler">
             <label for="sirop-filler-filter">сиропы</label>
             <input type="checkbox" name="filler" id="jam-filler-filter" value="jam-filler">
             <label for="jam-filler-filter">джем</label>
           </div>
-          <input type="submit" value="Применить">
+          <button type="submit">Применить</button>
         </fieldset>
       </form>
     <main>
@@ -244,7 +240,7 @@
       </ul>
       <ul>
         <li>
-          <a href="#nowhere">1</a>
+          <a>1</a>
         </li>
         <li>
           <a href="#nowhere">2</a>
@@ -259,8 +255,8 @@
           <a href="#nowhere">5</a>
         </li>
         <li>
-          <a href="#nowhere">
-            <span>стрелка вправо</span>
+          <a href="#nowhere" aria-label="переход на следующую страницу">
+            <img src="./img/catalog-arrow.svg" alt="">
           </a>
         </li>
       </ul>
@@ -268,23 +264,23 @@
     <footer>
       <ul>
         <li>
-          <a href="#nowhere">
-            <img src="./img/footer-fb-icon.svg" width="32" height="32" alt="facebook">
+          <a href="#nowhere" aria-label="страница Gllacy на facebook">
+            <img src="./img/footer-fb-icon.svg" width="32" height="32" alt="">
           </a>
         </li>
         <li>
-          <a href="#nowhere">
-            <img src="./img/footer-vk-icon.svg" width="32" height="32" alt="vkontakte">
+          <a href="#nowhere" aria-label="страница Gllacy в контакте">
+            <img src="./img/footer-vk-icon.svg" width="32" height="32" alt="">
           </a>
         </li>
         <li>
-          <a href="#nowhere">
-            <img src="./img/footer-inst-icon.svg" width="32" height="32" alt="instagram">
+          <a href="#nowhere" aria-label="страница Gllacy в instagram">
+            <img src="./img/footer-inst-icon.svg" width="32" height="32" alt="">
           </a>
         </li>
         <li>
-          <a href="#nowhere">
-            <img src="./img/footer-twit-icon.svg" width="32" height="32" alt="twitter">
+          <a href="#nowhere" aria-label="страница Gllacy в twitter">
+            <img src="./img/footer-twit-icon.svg" width="32" height="32" alt="">
           </a>
         </li>
       </ul>
@@ -306,7 +302,7 @@
         <a href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="./img/footer-avtor-logo.svg" width="108" height="39" alt="avtor-logo">
         </a>
-          <p>Сделано в HTML Academy © 2019</p>
+          <p>Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> © 2019</p>
       </div>
     </footer>
   </body>

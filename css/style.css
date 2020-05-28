@@ -87,18 +87,16 @@ img {
   font-weight: bold;
   text-shadow: var(--text-button-shadow);
 }
-.button-banner {
+.button__banner {
   font-size: 18px;
   line-height: 24px;
   min-width: 164px;
   padding: 12px 22px;
 }
-
-.subscribe_button {
-  font-size: 18px;
-  line-height: 24px;
-  min-width: 130px;
-  padding: 10px 19px;
+.button__navigation {
+  font-size: 16px;
+  line-height: 18px;
+  padding: 9px 14px;
 }
 
 .nav-button_cart {
@@ -113,19 +111,19 @@ img {
 .main-navigation {
   line-height: 18px;
 }
-.main-navigation li {
+.main-navigation__menu-item {
   list-style: none;
 }
-.main-navigation a {
+.main-navigation__menu-link {
   color: var(--text-white);
 }
-.main-navigation a:hover {
+.main-navigation__menu-link:hover {
   background-color: var(--rose-extralight);
 }
-.main-navigation a:active {
+.main-navigation__submenu-link:hover {
   background-color: var(--rose-normal);
 }
-.main-navigation a:not([href]) {
+.main-navigation__submenu-link:not([href]) {
   background-color: var(--rose-extradark);
 }
 
@@ -138,7 +136,6 @@ img {
   border-radius: 50%;
   border: none;
 }
-
 .nav-button {
   background: rgba(255, 255, 255, 0.2);
   width: 92px;
@@ -149,11 +146,9 @@ img {
   font-size: 14px;
   line-height: 16px;
 }
-
 .nav-time {
   line-height: 18px;
 }
-
 .nav-phone {
   font-size: 22px;
   line-height: 24px;
@@ -161,115 +156,115 @@ img {
   color: var(--text-white);
 }
 
-.site-navigation a {
+.page-list {
+  list-style: none;
+}
+.page-number {
+}
+.page-link {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--text-white);
+}
+
+
+.site-navigation {}
+.site-navigation__menu {}
+.site-navigation__menu-link {
   text-decoration: none;
   font-size: 14px;
   line-height: 16px;
   color: var(--text-white);
 }
-
-.site-navigation li {
+.site-navigation__menu-list {
   list-style: none;
 }
 
-.banner-berry {
+
+.banner__list {}
+.banner__berry {
   background-image: url(../img/promo-berry.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   border-radius: 20px;
 }
-
-.banner-choko {
+.banner__choko {
   background-image: url(../img/promo-choko.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   border-radius: 20px;
 }
-
-.banner-title {
+.banner__title {
   font-size: 35px;
   line-height: 41px;
   font-weight: bold;
   color: var(--text-white);
 }
-
-.banner-content {
+.banner__content {
   font-size: 18px;
   line-height: 22px;
   font-weight: bold;
   color: var(--text-white);
 }
-
-.banner a{
+.button__banner {
   text-decoration: none;
 }
 
-.hit-description{
-  text-decoration: none;
-  font-size: 16px;
-  line-height: 22px;
+
+.ice-cream{}
+
+
+.item-card {
+  list-style: none;
+}
+.item-card__price {
   font-weight: bold;
-  color: var(--text-white);
-}
-
-.hit-price {
   font-size: 45px;
-  line-height: 45px;
-  font-weight: bold;
-  color: var(--text-white);
-  text-shadow: var(--text-shadow);
-}
-
-.ice-cream_price {
-  font-weight: bold;
-  font-size: 35px;
   line-height: 41px;
   text-shadow: var(--text-shadow);
 }
-
-.ice-cream li {
-  list-style: none;
+.item-card__hit-label {
+  background-color: var(--text-white);
+  border-radius: 50%;
 }
-
-.ice-cream a {
+.item-card__description {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: bold;
+  color: var(--text-white);
+}
+.item-card__description-link {
   text-decoration: none;
   font-size: 16px;
   line-height: 22px;
   color: var(--text-white);
 }
-
-.ice-cream img {
+.item-card__image {
   border-radius: 50%;
 }
+.item-card__image-link {}
 
-.hit-label {
-  background-color: var(--text-white);
-  border-radius: 50%;
-}
 
 .about {
   color: var(--black-main);
   background-image: url("../img/vaffle-pattern.svg");
 }
-
-.about_title {
+.about__title {
   font-size: 24px;
   line-height: 30px;
 }
-
-.about_ice-cream::before {
+.about__ice-cream::before {
   content: url(../img/about-ice.svg);
 }
-
-.about_natural::before {
+.about__natural::before {
   content: url("../img/about-green.svg");
 }
-
-.about_farm::before {
+.about__farm::before {
   content: url("../img/about-cow.svg");
 }
-
-.about_termo::before {
+.about__termo::before {
   content: url("../img/about-termo.svg");
 }
 
@@ -279,17 +274,14 @@ img {
   background-repeat: no-repeat;
   border-radius: 16px;
 }
-
 .blog-title {
   color: var(--black-main);
   font-size: 16px;
   line-height: 22px;
 }
-
 .blog-text {
   max-width: 287px;
 }
-
 .blog a {
   text-decoration: underline;
   font-weight: bold;
@@ -303,13 +295,17 @@ img {
   background-repeat: no-repeat;
   background-size: contain;
 }
-
 .subscribe-text {
   color: var(--black-main);
   font-size: 16px;
   line-height: 22px;
 }
-
+.subscribe_button {
+  font-size: 18px;
+  line-height: 24px;
+  min-width: 130px;
+  padding: 10px 19px;
+}
 .subscribe input[type=email] {
   color: var(--input-grey);
   min-width: 368px;
@@ -365,9 +361,6 @@ img {
 }
 .footer-menu__item_heart::before {
   content: url("../img/footer-heart-icon.svg");
-  left: -22px;
-  position: absolute;
-  top: 0;
 }
 .footer-menu__link {
   color: var(--text-white);

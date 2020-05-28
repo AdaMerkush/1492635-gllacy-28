@@ -16,32 +16,32 @@
           <img src="./img/logo.svg" width="154" height="64" alt="logo">
         </a>
         <nav class="main-navigation">
-          <ul role="menubar">
-            <li aria-haspopup="true" tabindex="0">
-              <a href="catalog.html">Каталог</a>
-              <ul role="menu">
-                <li role="menuitem">
-                  <a href="#nowhere">Новинки</a>
+          <ul class="main-navigation__menu" role="menubar">
+            <li class="main-navigation__menu-item" aria-haspopup="true" tabindex="0">
+              <a class="main-navigation__menu-link" href="catalog.html">Каталог</a>
+              <ul class="main-navigation__menu-item main-navigation__submenu" role="menu">
+                <li class="main-navigation__menu-item main-navigation__submenu-item" role="menuitem">
+                  <a class="main-navigation__menu-link main-navigation__submenu-link" href="#nowhere">Новинки</a>
                 </li>
-                <li role="menuitem">
-                  <a href="catalog.html">Сливочное</a>
+                <li class="main-navigation__menu-item main-navigation__submenu-item" role="menuitem">
+                  <a class="main-navigation__menu-link main-navigation__submenu-link" href="catalog.html">Сливочное</a>
                 </li>
-                <li role="menuitem">
-                  <a href="#nowhere">Щербеты</a>
+                <li class="main-navigation__menu-item main-navigation__submenu-item" role="menuitem">
+                  <a class="main-navigation__menu-link main-navigation__submenu-link" href="#nowhere">Щербеты</a>
                 </li>
-                <li role="menuitem">
-                  <a href="#nowhere">Фруктовый лед</a>
+                <li class="main-navigation__menu-item main-navigation__submenu-item" role="menuitem">
+                  <a class="main-navigation__menu-link main-navigation__submenu-link" href="#nowhere">Фруктовый лед</a>
                 </li>
-                <li role="menuitem">
-                  <a href="#nowhere">Мелорин</a>
+                <li class="main-navigation__menu-item main-navigation__submenu-item" role="menuitem">
+                  <a class="main-navigation__menu-link main-navigation__submenu-link" href="#nowhere">Мелорин</a>
                 </li>
               </ul>
             </li>
-            <li role="menuitem">
-              <a href="#nowhere">Доставка и оплата</a>
+            <li class="main-navigation__menu-item" role="menuitem">
+              <a class="main-navigation__menu-link" href="#nowhere">Доставка и оплата</a>
             </li>
-            <li role="menuitem">
-              <a href="#nowhere">О компании</a>
+            <li class="main-navigation__menu-item" role="menuitem">
+              <a class="main-navigation__menu-link" href="#nowhere">О компании</a>
             </li>
           </ul>
         </nav>
@@ -101,85 +101,99 @@
             <a href="#nowhere">Давайте оба!</a>
           </div>
         </section>
-        <section class="banner">
-          <h2 class="visually-hidden">Специальное предложение</h2>
+
+        <section class="banner__list">
+          <h2 class="visually__hidden">Специальное предложение</h2>
           <ul>
-            <li class="banner-berry">
-              <h2 class="banner-title">Малинка даром!</h2>
-              <p class="banner-content">
+            <li class="banner__berry">
+              <h2 class="banner__title">Малинка даром!</h2>
+              <p class="banner__content">
                 При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку маринового варенья бесплатно.
               </p>
-              <a class="button button-banner" href="#nowhere">Хочу варенье!</a>
+              <a class="button button__banner" href="#nowhere">Хочу варенье!</a>
             </li>
-            <li class="banner-choko">
-              <h2 class="banner-title">Шоколадки даром!</h2>
-              <p class="banner-content">
+            <li class="banner__choko">
+              <h2 class="banner__title">Шоколадки даром!</h2>
+              <p class="banner__content">
                 При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
               </p>
-              <a class="button button-banner" href="#nowhere">Хочу шоколадки!</a>
-            </li>
-          </ul>
-          <ul class="hit-list">
-            <li class="hit-item">
-              <img class="hit-label" src="./img/hit.jpg" width="61" height="61" alt="хит продаж!">
-              <span class="hit-price">310 ₽/кг</span>
-              <a href="#nowhere">
-                <img src="./img/hit-1.jpg" width="267" height="267" alt="сливочно-апельсиновое мороженое">
-                <span class="hit-description">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
-              </a>
-            </li>
-            <li class="hit-item">
-              <img class="hit-label" src="./img/hit.jpg" width="61" height="61" alt="хит продаж!">
-              <span class="hit-price">380 ₽/кг</span>
-              <a href="#nowhere">
-                <img src="./img/hit-2.jpg" width="267" height="267" alt="мороженое кофе-шоколад">
-                <span class="hit-description">Сливочно-кофейное с кусочками шоколада</span>
-              </a>
-            </li>
-            <li class="hit-item">
-              <img class="hit-label" src="./img/hit.jpg" width="61" height="61" alt="хит продаж!">
-              <span class="hit-price">355 ₽/кг</span>
-              <a href="#nowhere">
-                <img src="./img/hit-3.jpg" width="267" height="267" alt="мороженое клубника-шоколад">
-                <span class="hit-description">Сливочно-клубничное с присыпкой из белого шоколада</span>
-              </a>
-            </li>
-            <li class="hit-item">
-              <img class="hit-label" src="./img/hit.jpg" width="61" height="61" alt="хит продаж!">
-              <span class="hit-price">415 ₽/кг</span>
-              <a href="#nowhere">
-                <img src="./img/hit-4.jpg" width="267" height="267" alt="мороженое крем-брюле-карамель">
-                <span class="hit-description">Сливочное крем-брюле с карамельной подливкой</span>
-              </a>
+              <a class="button button__banner" href="#nowhere">Хочу шоколадки!</a>
             </li>
           </ul>
         </section>
-        <section class="about">
-          <h3 class="about_title">
-            Магазин Глэйси – это онлайн и офлайн-магазин
-            по продаже мороженого собственного проиводства на развес
-          </h3>
-          <p class="about_ice-cream">
-            Все наше мороженое изготавливается на собственном производстве,
-            с использованием современного оборудования и проверенных временем технологий.
-          </p>
-          <p class="about_natural">
-            Для приготовления мороженого используются
-            настоящие сливки и молоко высочайшего качества.
-            Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
-          </p>
-          <p class="about_farm">
-            Закупка ингредиентов производится
-            только у проверенных фермерских хозяйств и компаний,
-            с которыми нас связывает долговременное сотрудничество.
-          </p>
-          <p class="about_termo">
-            Доставка нашего мороженного до заказчиков
-            осуществляется в специальном термопаке,
-            который не дает мороженому растаять в пути
-            и позволяет сохранить превосходный вкус.
-          </p>
-        </section>
+
+        <div class="ice-cream">
+          <ul class="item-list">
+            <li class="item-card">
+              <img class="item-card__hit-label" src="./img/hit.jpg" width="61" height="61" alt="хит продаж!">
+              <span class="item-card__price">310 ₽/кг</span>
+              <a class="item-card__image-link" href="#nowhere">
+                <img class="item-card__image" src="./img/hit-1.jpg" width="267" height="267" alt="сливочно-апельсиновое мороженое">
+              </a>
+              <a class="item-card__description-link" href="#nowhere">
+                <span class="item-card__description">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
+              </a>
+            </li>
+            <li class="item-card">
+              <img class="item-card__hit-label" src="./img/hit.jpg" width="61" height="61" alt="хит продаж!">
+              <span class="item-card__price">380 ₽/кг</span>
+              <a class="item-card__image-link" href="#nowhere">
+                <img class="item-card__image" src="./img/hit-2.jpg" width="267" height="267" alt="мороженое кофе-шоколад">
+              </a>
+              <a class="item-card__description-link" href="#nowhere">
+                <span class="item-card__description">Сливочно-кофейное с кусочками шоколада</span>
+              </a>
+            </li>
+            <li class="item-card">
+              <img class="item-card__hit-label" src="./img/hit.jpg" width="61" height="61" alt="хит продаж!">
+              <span class="item-card__price">355 ₽/кг</span>
+              <a class="item-card__image-link" href="#nowhere">
+                <img class="item-card__image" src="./img/hit-3.jpg" width="267" height="267" alt="мороженое клубника-шоколад">
+              </a>
+              <a class="item-card__description-link" href="#nowhere">
+                <span class="item-card__description">Сливочно-клубничное с присыпкой из белого шоколада</span>
+              </a>
+            </li>
+            <li class="item-card">
+              <img class="item-card__hit-label" src="./img/hit.jpg" width="61" height="61" alt="хит продаж!">
+              <span class="item-card__price">415 ₽/кг</span>
+              <a class="item-card__image-link" href="#nowhere">
+                <img class="item-card__image" src="./img/hit-4.jpg" width="267" height="267" alt="мороженое крем-брюле-карамель">
+              </a>
+              <a class="item-card__description-link" href="#nowhere">
+                <span class="item-card__description">Сливочное крем-брюле с карамельной подливкой</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      <section class="about">
+        <h3 class="about__title">
+          Магазин Глэйси – это онлайн и офлайн-магазин
+          по продаже мороженого собственного проиводства на развес
+        </h3>
+        <p class="about__ice-cream">
+          Все наше мороженое изготавливается на собственном производстве,
+          с использованием современного оборудования и проверенных временем технологий.
+        </p>
+        <p class="about__natural">
+          Для приготовления мороженого используются
+          настоящие сливки и молоко высочайшего качества.
+          Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
+        </p>
+        <p class="about__farm">
+          Закупка ингредиентов производится
+          только у проверенных фермерских хозяйств и компаний,
+          с которыми нас связывает долговременное сотрудничество.
+        </p>
+        <p class="about__termo">
+          Доставка нашего мороженного до заказчиков
+          осуществляется в специальном термопаке,
+          который не дает мороженому растаять в пути
+          и позволяет сохранить превосходный вкус.
+        </p>
+      </section>
+
         <article class="blog">
           <h4 class="blog-title">Новое в нашем блоге</h4>
           <div class="blog-text">
@@ -215,51 +229,53 @@
       </div>
     </main>
     <footer class="footer">
-      <div class="footer-social">
-        <ul class="footer-social__list">
-          <li class="footer-social__item">
-            <a class="footer-social__link" href="#nowhere" aria-label="страница Gllacy на facebook">
-              <img class="footer-social__icon" src="./img/footer-fb-icon.svg" width="32" height="32" alt="">
-            </a>
-          </li>
-          <li class="footer-social__item">
-            <a class="footer-social__link" href="#nowhere" aria-label="страница Gllacy в контакте">
-              <img class="footer-social__icon" src="./img/footer-vk-icon.svg" width="32" height="32" alt="">
-            </a>
-          </li>
-          <li class="footer-social__item">
-            <a class="footer-social__link" href="#nowhere" aria-label="страница Gllacy в instagram">
-              <img class="footer-social__icon" src="./img/footer-inst-icon.svg" width="32" height="32" alt="">
-            </a>
-          </li>
-          <li class="footer-social__item">
-            <a class="footer-social__link" href="#nowhere" aria-label="страница Gllacy в twitter">
-              <img class="footer-social__icon" src="./img/footer-twit-icon.svg" width="32" height="32" alt="">
-            </a>
-          </li>
-        </ul>
-      </div>
-      <nav class="footer-menu">
-        <ul class="footer-menu__list">
-          <li class="footer-menu__item footer-menu__item_heart">
-            <a class="footer-menu__link" href="#nowhere">Для поставщиков</a>
-          </li>
-          <li class="footer-menu__item">
-            <a class="footer-menu__link" href="#nowhere">О производстве</a>
-          </li>
-          <li class="footer-menu__item">
-            <a class="footer-menu__link" href="#nowhere">Наши документы</a>
-          </li>
-          <li class="footer-menu__item">
-            <a class="footer-menu__link" href="#nowhere">Экологические стандарты</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="footer-author">
-        <a class="footer-author__link" href="https://htmlacademy.ru/intensive/htmlcss" title="Онлайн‑курс HTML и CSS. Профессиональная вёрстка сайтов">
-          <img class="footer-author__image" src="img/logo-html-academy.svg" width="108" height="39" alt="HTML Academy">
-        </a>
-        <p class="footer-author__text">Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> © 2019</p>
+      <div class="container">
+        <div class="footer-social">
+          <ul class="footer-social__list">
+            <li class="footer-social__item">
+              <a class="footer-social__link" href="#nowhere" aria-label="страница Gllacy на facebook">
+                <img class="footer-social__icon" src="./img/footer-fb-icon.svg" width="32" height="32" alt="">
+              </a>
+            </li>
+            <li class="footer-social__item">
+              <a class="footer-social__link" href="#nowhere" aria-label="страница Gllacy в контакте">
+                <img class="footer-social__icon" src="./img/footer-vk-icon.svg" width="32" height="32" alt="">
+              </a>
+            </li>
+            <li class="footer-social__item">
+              <a class="footer-social__link" href="#nowhere" aria-label="страница Gllacy в instagram">
+                <img class="footer-social__icon" src="./img/footer-inst-icon.svg" width="32" height="32" alt="">
+              </a>
+            </li>
+            <li class="footer-social__item">
+              <a class="footer-social__link" href="#nowhere" aria-label="страница Gllacy в twitter">
+                <img class="footer-social__icon" src="./img/footer-twit-icon.svg" width="32" height="32" alt="">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <nav class="footer-menu">
+          <ul class="footer-menu__list">
+            <li class="footer-menu__item footer-menu__item_heart">
+              <a class="footer-menu__link" href="#nowhere">Для поставщиков</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#nowhere">О производстве</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#nowhere">Наши документы</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#nowhere">Экологические стандарты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer-author">
+          <a class="footer-author__link" href="https://htmlacademy.ru/intensive/htmlcss" title="Онлайн‑курс HTML и CSS. Профессиональная вёрстка сайтов">
+            <img class="footer-author__image" src="img/logo-html-academy.svg" width="108" height="39" alt="HTML Academy">
+          </a>
+          <p class="footer-author__text">Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> © 2019</p>
+        </div>
       </div>
     </footer>
     <section class="pop-up">

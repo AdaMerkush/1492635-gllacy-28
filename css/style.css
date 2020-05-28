@@ -21,47 +21,57 @@
   --sircle-hover: rgba(255, 255, 255, 0.4);
 }
 
-body {
-  font-family: Roboto, "Open Sans", sans-serif;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 22px;
-  background-color: var(--main-green);
-  color: var(--text-white);
-  margin: 0;
-  padding: 0;
-  max-width: 1200px;
-}
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+body {
+  background-color: var(--main-green);
+  color: var(--text-white);
+  font-family: Roboto, "Open Sans", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0;
+  max-width: 1200px;
+  padding: 0;
 }
 
-a {
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.link {
+  position: relative;
   text-decoration: none;
+}
+.link::after {
+  bottom: 0;
+  content: '';
+  border-bottom: 1px solid currentColor;
+  left: 0;
+  opacity: 0.3;
+  position: absolute;
+  right: 0;
 }
 
 .visually-hidden {
-  position: absolute;
-  width: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
   height: 1px;
   margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
   overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 .container {
-  max-width: 1146px;
   margin: 0 auto;
+  max-width: 1146px;
 }
 
 .pop-up {
@@ -69,15 +79,14 @@ a {
 }
 
 .button {
-  font-weight: bold;
-  color: var(--text-white);
   background-image: var(--button-gradient);
-  box-shadow: var(--button-shadow);
   border: none;
-  text-shadow: var(--text-button-shadow);
   border-radius: 70px;
+  box-shadow: var(--button-shadow);
+  color: var(--text-white);
+  font-weight: bold;
+  text-shadow: var(--text-button-shadow);
 }
-
 .button-banner {
   font-size: 18px;
   line-height: 24px;
@@ -86,7 +95,6 @@ a {
 }
 
 .subscribe_button {
-  min-width: 130px;
   font-size: 18px;
   line-height: 24px;
   min-width: 130px;
@@ -94,32 +102,31 @@ a {
 }
 
 .nav-button_cart {
+  background-color: var(--text-white);
+  border-radius: 20px;
+  color: var(--black-main);
   font-size: 14px;
   line-height: 16px;
-  color: var(--black-main);
-  border-radius: 20px;
-  background-color: var(--text-white);
   padding: 9px 15px;
 }
 
 .main-navigation {
   line-height: 18px;
 }
-
 .main-navigation li {
   list-style: none;
 }
-
 .main-navigation a {
   color: var(--text-white);
 }
 .main-navigation a:hover {
   background-color: var(--rose-extralight);
 }
-.main-navigation a:active {}
-
+.main-navigation a:active {
+  background-color: var(--rose-normal);
+}
 .main-navigation a:not([href]) {
-  background-color: var(--rose-extradark:);
+  background-color: var(--rose-extradark);
 }
 
 .user-navigation {}
@@ -316,13 +323,11 @@ a {
   border-radius: 16px;
   background-color: var(--nude-bg);
 }
-
 .contacts p {
   font-size: 14px;
   line-height: 20px;
   color: var(--black-main);
 }
-
 .contacts address,
 .contacts_phone {
   font-weight: bold;
@@ -330,7 +335,6 @@ a {
   line-height: 24px;
   color: var(--black-main);
 }
-
 .contacts_button {
   text-decoration: none;
   font-weight: bold;
@@ -341,50 +345,47 @@ a {
 
 .footer {}
 
-.footer li {
+.footer-social {}
+.footer-social__list {}
+.footer-social__item {
   list-style: none;
 }
-
-.footer_info a {
-  text-decoration: none;
-  font-size: 13px;
-  line-height: 18px;
-  color: var(--text-white);
+.footer-social__link {}
+.footer-social__icon {
+  display: block;
 }
 
-.footer_info:nth-child(1) {
+.footer-menu {}
+.footer-menu__list {}
+.footer-menu__item {
+  list-style: none;
+}
+.footer-menu__item_heart {
   font-weight: bold;
 }
-
-.footer_info:nth-child(1)::before {
+.footer-menu__item_heart::before {
   content: url("../img/footer-heart-icon.svg");
+  left: -22px;
+  position: absolute;
+  top: 0;
 }
-
-.footer_avtor {
-  font-size: 12px;
-  line-height: 18px;
+.footer-menu__link {
   color: var(--text-white);
-}
-
-.footer_avtor  a {
+  font-size: 13px;
+  line-height: 18px;
   text-decoration: none;
-  font-size: 12px;
-  line-height: 18px;
-  color: var(--text-white);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.footer-author {
+  color: var(--text-white);
+  font-size: 12px;
+  line-height: 18px;
+}
+.footer-author__link {
+  color: var(--text-white);
+  font-size: 12px;
+  line-height: 18px;
+  text-decoration: none;
+}
+.footer-author__image {}
+.footer-author__text {}

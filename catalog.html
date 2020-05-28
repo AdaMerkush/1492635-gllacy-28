@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="keyword" content="">
     <meta name="description" content="">
+    <title>Gllacy</title>
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <title>Gllacy</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
   </head>
   <body>
     <header>
@@ -20,11 +20,11 @@
             <span class="visually-hidden">Текущий пункт:</span>
             <a>Каталог</a>
             <ul role="menu">
-              <li tabindex="-1" role="menuitem">
+              <li role="menuitem">
                 <a href="#nowhere">Новинки</a>
               </li>
               <li role="menuitem">
-                <a href="#nowhere">Сливочное</a>
+                <a>Сливочное</a>
               </li>
               <li role="menuitem">
                 <a href="#nowhere">Щербеты</a>
@@ -110,47 +110,47 @@
         </li>
       </ul>
     </div>
-      <form action="https://echo.htmlacademy.ru/courses" method="post">
-        <fieldset>
-          <legend class="visually-hidden">фильтры товара</legend>
-          <label for="sort-filter">Сортировка:</label>
-          <div>
-            <select name="sort" id="sort-filter">
-              <option value="popular">по популярности</option>
-              <option value="cheap">сначала недорогие</option>
-              <option value="expensive">сначала дорогие</option>
-              <option value="fat">по жирности</option>
-            </select>
-          </div>
-          <label for="price-filter">Цена: 100 ₽ – 500 ₽</label>
-          <input type="range" name="price" id="price-filter" min="100" max="500" step="10">
-          <div>
-            <p>Жирность:</p>
-            <input name="fat" value="0%" id="zero-fat-filter" type="radio">
-            <label for="zero-fat-filter">0%</label>
-            <input name="fat" value="до 10%" id="10-fat-filter" type="radio" checked>
-            <label for="10-fat-filter">до 10%</label>
-            <input name="fat" value="до 30%" id="30-fat-filter" type="radio">
-            <label for="30-fat-filter">до 30%</label>
-            <input name="fat" value="выше 30%" id="more-fat-filter" type="radio">
-            <label for="more-fat-filter">выше 30%</label>
-          </div>
-          <div>
-            <p>Наполнители:</p>
-            <input type="checkbox" name="filler" id="choko-filler-filter" value="choko-filler" checked>
-            <label for="choko-filler-filter">шоколадные</label>
-            <input type="checkbox" name="filler" id="shugar-filler-filter" value="shugar-filler" checked>
-            <label for="shugar-filler-filter">сахарные присыпки</label>
-            <input type="checkbox" name="filler" id="fruit-filler-filter" value="fruit-filler">
-            <label for="fruit-filler-filter">фрукты</label>
-            <input type="checkbox" name="filler" id="sirop-filler-filter" value="sirop-filler">
-            <label for="sirop-filler-filter">сиропы</label>
-            <input type="checkbox" name="filler" id="jam-filler-filter" value="jam-filler">
-            <label for="jam-filler-filter">джем</label>
-          </div>
-          <button type="submit">Применить</button>
-        </fieldset>
-      </form>
+    <form action="https://echo.htmlacademy.ru/courses" method="post">
+      <fieldset>
+        <legend class="visually-hidden">фильтры товара</legend>
+        <label for="sort-filter">Сортировка:</label>
+        <div>
+          <select name="sort" id="sort-filter">
+            <option value="popular">по популярности</option>
+            <option value="cheap">сначала недорогие</option>
+            <option value="expensive">сначала дорогие</option>
+            <option value="fat">по жирности</option>
+          </select>
+        </div>
+        <label for="price-filter">Цена: 100 ₽ – 500 ₽</label>
+        <input type="range" name="price" id="price-filter" min="100" max="500" step="10">
+        <div>
+          <p>Жирность:</p>
+          <input name="fat" value="0%" id="zero-fat-filter" type="radio">
+          <label for="zero-fat-filter">0%</label>
+          <input name="fat" value="до 10%" id="10-fat-filter" type="radio" checked>
+          <label for="10-fat-filter">до 10%</label>
+          <input name="fat" value="до 30%" id="30-fat-filter" type="radio">
+          <label for="30-fat-filter">до 30%</label>
+          <input name="fat" value="выше 30%" id="more-fat-filter" type="radio">
+          <label for="more-fat-filter">выше 30%</label>
+        </div>
+        <div>
+          <p>Наполнители:</p>
+          <input type="checkbox" name="filler" id="choko-filler-filter" value="choko-filler" checked>
+          <label for="choko-filler-filter">шоколадные</label>
+          <input type="checkbox" name="filler" id="shugar-filler-filter" value="shugar-filler" checked>
+          <label for="shugar-filler-filter">сахарные присыпки</label>
+          <input type="checkbox" name="filler" id="fruit-filler-filter" value="fruit-filler">
+          <label for="fruit-filler-filter">фрукты</label>
+          <input type="checkbox" name="filler" id="sirop-filler-filter" value="sirop-filler">
+          <label for="sirop-filler-filter">сиропы</label>
+          <input type="checkbox" name="filler" id="jam-filler-filter" value="jam-filler">
+          <label for="jam-filler-filter">джем</label>
+        </div>
+        <button type="submit">Применить</button>
+      </fieldset>
+    </form>
     <main class="ice-cream">
       <h1>Сливочное мороженое</h1>
       <ul>
@@ -263,47 +263,51 @@
       </ul>
     </main>
     <footer class="footer">
-      <ul>
-        <li>
-          <a href="#nowhere" aria-label="страница Gllacy на facebook">
-            <img src="./img/footer-fb-icon.svg" width="32" height="32" alt="">
-          </a>
-        </li>
-        <li>
-          <a href="#nowhere" aria-label="страница Gllacy в контакте">
-            <img src="./img/footer-vk-icon.svg" width="32" height="32" alt="">
-          </a>
-        </li>
-        <li>
-          <a href="#nowhere" aria-label="страница Gllacy в instagram">
-            <img src="./img/footer-inst-icon.svg" width="32" height="32" alt="">
-          </a>
-        </li>
-        <li>
-          <a href="#nowhere" aria-label="страница Gllacy в twitter">
-            <img src="./img/footer-twit-icon.svg" width="32" height="32" alt="">
-          </a>
-        </li>
-      </ul>
-      <ul>
-        <li class="footer_info">
-          <a href="#nowhere">Для поставщиков</a>
-        </li>
-        <li class="footer_info">
-          <a href="#nowhere">О производстве</a>
-        </li>
-        <li class="footer_info">
-          <a href="#nowhere">Наши документы</a>
-        </li>
-        <li class="footer_info">
-          <a href="#nowhere">Экологические стандарты</a>
-        </li>
-      </ul>
-      <div class="footer_avtor">
-        <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="./img/footer-avtor-logo.svg" width="108" height="39" alt="avtor-logo">
+      <div class="footer-social">
+        <ul class="footer-social__list">
+          <li class="footer-social__item">
+            <a class="footer-social__link" href="#nowhere" aria-label="страница Gllacy на facebook">
+              <img class="footer-social__icon" src="./img/footer-fb-icon.svg" width="32" height="32" alt="">
+            </a>
+          </li>
+          <li class="footer-social__item">
+            <a class="footer-social__link" href="#nowhere" aria-label="страница Gllacy в контакте">
+              <img class="footer-social__icon" src="./img/footer-vk-icon.svg" width="32" height="32" alt="">
+            </a>
+          </li>
+          <li class="footer-social__item">
+            <a class="footer-social__link" href="#nowhere" aria-label="страница Gllacy в instagram">
+              <img class="footer-social__icon" src="./img/footer-inst-icon.svg" width="32" height="32" alt="">
+            </a>
+          </li>
+          <li class="footer-social__item">
+            <a class="footer-social__link" href="#nowhere" aria-label="страница Gllacy в twitter">
+              <img class="footer-social__icon" src="./img/footer-twit-icon.svg" width="32" height="32" alt="">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <nav class="footer-menu">
+        <ul class="footer-menu__list">
+          <li class="footer-menu__item footer-menu__item_heart">
+            <a class="footer-menu__link" href="#nowhere">Для поставщиков</a>
+          </li>
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="#nowhere">О производстве</a>
+          </li>
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="#nowhere">Наши документы</a>
+          </li>
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="#nowhere">Экологические стандарты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="footer-author">
+        <a class="footer-author__link" href="https://htmlacademy.ru/intensive/htmlcss" title="Онлайн‑курс HTML и CSS. Профессиональная вёрстка сайтов">
+          <img class="footer-author__image" src="img/logo-html-academy.svg" width="108" height="39" alt="HTML Academy">
         </a>
-          <p>Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> © 2019</p>
+        <p class="footer-author__text">Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> © 2019</p>
       </div>
     </footer>
   </body>

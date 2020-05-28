@@ -4,13 +4,12 @@
     <meta charset="utf-8">
     <meta name="keyword" content="">
     <meta name="description" content="">
+    <title>Gllacy</title>
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <title>Gllacy</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
   </head>
   <body>
-
     <header>
       <div class="container">
         <a class="header-logo">
@@ -21,7 +20,7 @@
             <li aria-haspopup="true" tabindex="0">
               <a href="catalog.html">Каталог</a>
               <ul role="menu">
-                <li tabindex="-1" role="menuitem">
+                <li role="menuitem">
                   <a href="#nowhere">Новинки</a>
                 </li>
                 <li role="menuitem">
@@ -216,47 +215,51 @@
       </div>
     </main>
     <footer class="footer">
-      <ul>
-        <li>
-          <a href="#nowhere" aria-label="страница Gllacy на facebook">
-            <img src="./img/footer-fb-icon.svg" width="32" height="32" alt="">
-          </a>
-        </li>
-        <li>
-          <a href="#nowhere" aria-label="страница Gllacy в контакте">
-            <img src="./img/footer-vk-icon.svg" width="32" height="32" alt="">
-          </a>
-        </li>
-        <li>
-          <a href="#nowhere" aria-label="страница Gllacy в instagram">
-            <img src="./img/footer-inst-icon.svg" width="32" height="32" alt="">
-          </a>
-        </li>
-        <li>
-          <a href="#nowhere" aria-label="страница Gllacy в twitter">
-            <img src="./img/footer-twit-icon.svg" width="32" height="32" alt="">
-          </a>
-        </li>
-      </ul>
-      <ul>
-        <li class="footer_info">
-          <a href="#nowhere">Для поставщиков</a>
-        </li>
-        <li class="footer_info">
-          <a href="#nowhere">О производстве</a>
-        </li>
-        <li class="footer_info">
-          <a href="#nowhere">Наши документы</a>
-        </li>
-        <li class="footer_info">
-          <a href="#nowhere">Экологические стандарты</a>
-        </li>
-      </ul>
-      <div class="footer_avtor">
-        <a href="https://htmlacademy.ru/intensive/htmlcss" title="Онлайн‑курс HTML и CSS. Профессиональная вёрстка сайтов">
-          <img src="./img/footer-avtor-logo.svg" width="108" height="39" alt="html-academy">
+      <div class="footer-social">
+        <ul class="footer-social__list">
+          <li class="footer-social__item">
+            <a class="footer-social__link" href="#nowhere" aria-label="страница Gllacy на facebook">
+              <img class="footer-social__icon" src="./img/footer-fb-icon.svg" width="32" height="32" alt="">
+            </a>
+          </li>
+          <li class="footer-social__item">
+            <a class="footer-social__link" href="#nowhere" aria-label="страница Gllacy в контакте">
+              <img class="footer-social__icon" src="./img/footer-vk-icon.svg" width="32" height="32" alt="">
+            </a>
+          </li>
+          <li class="footer-social__item">
+            <a class="footer-social__link" href="#nowhere" aria-label="страница Gllacy в instagram">
+              <img class="footer-social__icon" src="./img/footer-inst-icon.svg" width="32" height="32" alt="">
+            </a>
+          </li>
+          <li class="footer-social__item">
+            <a class="footer-social__link" href="#nowhere" aria-label="страница Gllacy в twitter">
+              <img class="footer-social__icon" src="./img/footer-twit-icon.svg" width="32" height="32" alt="">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <nav class="footer-menu">
+        <ul class="footer-menu__list">
+          <li class="footer-menu__item footer-menu__item_heart">
+            <a class="footer-menu__link" href="#nowhere">Для поставщиков</a>
+          </li>
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="#nowhere">О производстве</a>
+          </li>
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="#nowhere">Наши документы</a>
+          </li>
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="#nowhere">Экологические стандарты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="footer-author">
+        <a class="footer-author__link" href="https://htmlacademy.ru/intensive/htmlcss" title="Онлайн‑курс HTML и CSS. Профессиональная вёрстка сайтов">
+          <img class="footer-author__image" src="img/logo-html-academy.svg" width="108" height="39" alt="HTML Academy">
         </a>
-          <p>Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> © 2019</p>
+        <p class="footer-author__text">Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> © 2019</p>
       </div>
     </footer>
     <section class="pop-up">

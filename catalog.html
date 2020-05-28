@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="keyword" content="">
     <meta name="description" content="">
+    <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Gllacy</title>
@@ -13,7 +14,7 @@
       <a href="./index.html">
         <img src="./img/logo.svg" width="154" height="64" alt="logo">
       </a>
-      <nav>
+      <nav class="main-navigation">
         <ul role="menubar">
           <li aria-current="page" aria-haspopup="true" tabindex="0">
             <span class="visually-hidden">Текущий пункт:</span>
@@ -44,20 +45,20 @@
           </li>
         </ul>
       </nav>
-      <div>
-        <button>
+      <div class="user-navigation">
+        <button class="nav-search">
           <img src="./img/search.svg" width="16" height="16" alt="поиск по сайту">
         </button>
-        <button type="button">
+        <button type="button" class="nav-button">
           <img src="./img/enter-icon.svg" width="20" height="19" alt="вход в личный кабинет">
           Вход
         </button>
-        <button>
+        <button class="nav-button_cart">
           <img src="./img/basket-icon2.svg" alt="корзина с покупками">
           2 товара
         </button>
       </div>
-      <section>
+      <section class="pop-up">
         <h2 class="visually-hidden">список покупок</h2>
         <table>
           <tr>
@@ -92,11 +93,11 @@
         <button type="submit">Оформить заказ</button>
       </section>
       <div>
-        <p>с 10 до 20, ежедневно</p>
-        <a href="tel:+78124502525">8 812 450-25-25</a>
+        <p class="nav-time">с 10 до 20, ежедневно</p>
+        <a class="nav-phone" href="tel:+78124502525">8 812 450-25-25</a>
       </div>
     </header>
-    <div>
+    <div class="site-navigation">
       <ul>
         <li>
           <a href="index.html">Главная</a>
@@ -150,88 +151,88 @@
           <button type="submit">Применить</button>
         </fieldset>
       </form>
-    <main>
+    <main class="ice-cream">
       <h1>Сливочное мороженое</h1>
       <ul>
         <li>
-          310 ₽/кг
+          <span class="ice-cream_price">310 ₽/кг</span>
           <a href="#nowhere">
             <img src="./img/catalog-1.jpg" width="267" height="267" alt="купить мороженое">
             Сливочное с апельсиновым джемом и цитрусовой стружкой
           </a>
         </li>
         <li>
-          380 ₽/кг
+          <span class="ice-cream_price">380 ₽/кг</span>
           <a href="#nowhere">
             <img src="./img/catalog-2.jpg" width="267" height="267" alt="купить мороженое">
             Сливочно-кофейное с кусочками шоколада
           </a>
         </li>
         <li>
-          355 ₽/кг
+          <span class="ice-cream_price">355 ₽/кг</span>
           <a href="#nowhere">
             <img src="./img/catalog-3.jpg" width="267" height="267" alt="купить мороженое">
             Сливочно-клубничное с присыпкой из белого шоколада
           </a>
         </li>
         <li>
-          415 ₽/кг
+          <span class="ice-cream_price">415 ₽/кг</span>
           <a href="#nowhere">
             <img src="./img/catalog-4.jpg" width="267" height="267" alt="купить мороженое">
             Сливочное крем-брюле с карамельной подливкой
           </a>
         </li>
         <li>
-          325 ₽/кг
+          <span class="ice-cream_price">325 ₽/кг</span>
           <a href="#nowhere">
             <img src="./img/catalog-5.jpg" width="267" height="267" alt="скупить мороженое">
             Сливочное с брусничным джемом
           </a>
         </li>
         <li>
-          410 ₽/кг
+          <span class="ice-cream_price">410 ₽/кг</span>
           <a href="#nowhere">
             <img src="./img/catalog-6.jpg" width="267" height="267" alt="купить мороженое">
             Сливочно-черничное с цельными ягодами черники
           </a>
         </li>
         <li>
-          315 ₽/кг
+          <span class="ice-cream_price">315 ₽/кг</span>
           <a href="#nowhere">
             <img src="./img/catalog-7.jpg" width="267" height="267" alt="купить мороженое">
             Сливочно-лимонное с карамельной присыпкой
           </a>
         </li>
         <li>
-          320 ₽/кг
+          <span class="ice-cream_price">320 ₽/кг</span>
           <a href="#nowhere">
             <img src="./img/catalog-8.jpg" width="267" height="267" alt="купить мороженое">
             Сливочное с шоколадной стружкой
           </a>
         </li>
         <li>
-          440 ₽/кг
+          <span class="ice-cream_price">440 ₽/кг</span>
           <a href="#nowhere">
             <img src="./img/catalog-9.jpg" width="267" height="267" alt="купить мороженое">
             Сливочно-ванильное с кусочками шоколада
           </a>
         </li>
         <li>
-          435 ₽/кг
+          <span class="ice-cream_price">435 ₽/кг</span>
           <a href="#nowhere">
             <img src="./img/catalog-10.jpg" width="267" height="267" alt="купить мороженое">
             Сливочноe с ментоловым сиропом
           </a>
         </li>
         <li>
-          355 ₽/кг
+          <span class="ice-cream_price">355 ₽/кг</span>
           <a href="#nowhere">
             <img src="./img/catalog-11.jpg" width="267" height="267" alt="купить мороженое">
             Сливочное с кусочками черного шоколада
           </a>
         </li>
         <li>
-          420 ₽/кг
+          <span class="ice-cream_price">420 ₽/кг</span>
           <a href="#nowhere">
             <img src="./img/catalog-12.jpg" width="267" height="267" alt="купить мороженое">
             Сливочное с мятным сиропом
@@ -261,7 +262,7 @@
         </li>
       </ul>
     </main>
-    <footer>
+    <footer class="footer">
       <ul>
         <li>
           <a href="#nowhere" aria-label="страница Gllacy на facebook">
@@ -285,20 +286,20 @@
         </li>
       </ul>
       <ul>
-        <li>
+        <li class="footer_info">
           <a href="#nowhere">Для поставщиков</a>
         </li>
-        <li>
+        <li class="footer_info">
           <a href="#nowhere">О производстве</a>
         </li>
-        <li>
+        <li class="footer_info">
           <a href="#nowhere">Наши документы</a>
         </li>
-        <li>
+        <li class="footer_info">
           <a href="#nowhere">Экологические стандарты</a>
         </li>
       </ul>
-      <div>
+      <div class="footer_avtor">
         <a href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="./img/footer-avtor-logo.svg" width="108" height="39" alt="avtor-logo">
         </a>

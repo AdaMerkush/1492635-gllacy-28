@@ -15,12 +15,17 @@
   --black-link: #323232;
   --nude-bg: #FEFEFE;
   --blue-hover: rgba(46, 136, 228, 0.52);
+  --button-pressed-gradient: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  --button-hover-gradient: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
   --button-gradient: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
   --button-opasity: rgba(255, 255, 255, 0.2);
   --button-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
   --text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
   --text-button-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  --button-hover-shadow: 0px 2px 2px #AC1000;
+  --button-pressed-shadow: inset 0px 2px 2px #942718;
   --sircle-hover: rgba(255, 255, 255, 0.4);
+  --bg-white-hover: rgba(0, 0, 0, 0.2);
 }
 
 *,
@@ -30,7 +35,8 @@
 }
 
 body {
-  background-color: var(--main-green);
+  background-repeat: no-repeat;
+  background-position: top center;
   color: var(--text-white);
   font-family: Roboto, "Open Sans", sans-serif;
   font-style: normal;
@@ -42,6 +48,19 @@ body {
   padding: 0 15px;
 }
 
+.site-page-1 {
+  background-color: var(--main-green);
+  background-image: url("../img/group-1.png");
+}
+.site-page-2 {
+  background-color: var(--main-blue);
+  background-image: url("../img/group-3.png");
+}
+.site-page-3 {
+  background-color: var(--main-grey);
+  background-image: url("../img/group-2.png");
+}
+
 img {
   height: auto;
   max-width: 100%;
@@ -49,7 +68,6 @@ img {
 
 .container {
   margin: 0 auto;
-  max-width: 1146px;
 }
 .link {
   position: relative;
@@ -76,6 +94,13 @@ img {
   padding: 0;
   position: absolute;
   width: 1px;
+}
+.input[type=email]:focus {
+  border: 2px solid rgba(46, 136, 228, 0.52);
+  outline: none;
+}
+.input[type=email]:focus-within {
+  color: var(--black-main);
 }
 /*основные стили END*/
 
@@ -108,6 +133,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 9px;
 }
 .header-logo {
   margin-right: 24px;
@@ -205,14 +231,14 @@ img {
   grid-template-rows: fit-content(229px) fit-content(306px) fit-content(220px) fit-content(430px);
   row-gap: 40px;
   grid-template-areas:
-    "banner__list"
+    "banner"
     "ice-cream"
     "about"
     "blog-subscribe"
     "contacts";
 }
-.banner__list {
-  grid-area: banner__list;
+.banner {
+  grid-area: banner;
 }
 .ice-cream {
   grid-area: ice-cream;
@@ -242,18 +268,34 @@ img {
   font-weight: bold;
   text-shadow: var(--text-button-shadow);
 }
-.button__banner {
+.button:hover {
+  background-image: var(--button-hover-gradient);
+  box-shadow: var(--button-hover-shadow);
+}
+.button:active {
+  background-image: var(--button-pressed-gradient);
+  box-shadow: var(--button-pressed-shadow);
+}
+.button_card {
+  padding: 12px 16px;
+  text-align: center;
+  display: block;
+  width: 200px;
+  height: 44px;
+  margin: 0 auto;
+}
+.button_banner {
   font-size: 18px;
   line-height: 24px;
   min-width: 164px;
   padding: 12px 22px;
 }
-.button__navigation {
+.button_navigation {
   font-size: 16px;
   line-height: 18px;
   padding: 9px 14px 11px 14px;
 }
-.nav-button {
+.button_nav {
   background: rgba(255, 255, 255, 0.2);
   color: inherit;
   width: 92px;
@@ -264,20 +306,20 @@ img {
   line-height: 16px;
   margin-left: 10px;
 }
-.nav-button:hover {
+.button_nav:hover {
   background-color: var(--text-white);
   color: var(--black-main);
   cursor: pointer;
 }
-.nav-button path {
+.button_nav path {
   fill: currentColor;
 }
-.nav-button_text {
+.button-nav_text {
   display: inline-block;
   padding: 0;
   vertical-align: middle;
 }
-.nav-button_icon {
+.button-nav_icon {
   vertical-align: middle;
 }
 .nav-search {
@@ -313,14 +355,87 @@ img {
   color: var(--black-main);
   cursor: pointer;
 }
-.nav-button_text {
+.button-nav_text {
   display: inline-block;
   vert-align: middle;
 }
-
+.button-slider {
+  font-size: 32px;
+  line-height: 44px;
+  padding: 9px 40px 10px 40px;
+  margin: 27px auto 0;
+  width: 278px;
+  display: block;
+  text-decoration: none;
+}
 /*кнопки END*/
 
 
+/*карточки товара START*/
+.item-list {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  row-gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+.item-card {
+  height: 320px;
+  display: block;
+  position: relative;
+  border-radius: 4px;
+}
+.item-card:hover {
+  z-index: 2;
+}
+.item-card__main {
+  padding: 6px 13px 21px 13px;
+  pointer-events: none;
+}
+.item-card:hover .item-card__main {
+  background-color: var(--bg-white-hover);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+  pointer-events: all;
+}
+.item-card .button_card {
+  margin-top: 11px;
+  opacity: 0;
+}
+.item-card:hover .button_card {
+  opacity: 1;
+}
+.item-card__price {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 41px;
+  text-shadow: var(--text-shadow);
+  margin: 0;
+  position: absolute;
+  top: 216px;
+}
+.item-card__hit-label {
+  background-color: var(--text-white);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.item-card__link {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--text-white);
+  text-align: center;
+  display: inline-block;
+}
+.item-card__image {
+  border-radius: 50%;
+  margin-bottom: 17px;
+}
+/*карточки товара END*/
+
+
+/*нумерация страниц каталога START*/
 .page-list {
   list-style: none;
 }
@@ -332,127 +447,105 @@ img {
   line-height: 18px;
   color: var(--text-white);
 }
+/*нумерация страниц каталога END*/
 
 
-.banner__list {}
-.banner__item {
+/*рекламные баннеры главной START*/
+.banner-list {
   display: flex;
   justify-content: space-between;
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.banner__berry {
-  background-image: url(../img/promo-berry.jpg);
+.banner-item {
+  width: 560px;
+  padding: 16px 22px 22px 16px;
+  min-height: 229px;
   background-repeat: no-repeat;
   background-size: contain;
   border-radius: 20px;
+}
+.banner__berry {
+  background-image: url(../img/promo-berry.jpg);
 }
 .banner__choko {
   background-image: url(../img/promo-choko.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  border-radius: 20px;
 }
-.banner__title {
+.banner-title {
+  margin: 0;
   font-size: 35px;
   line-height: 41px;
   font-weight: bold;
   color: var(--text-white);
 }
-.banner__content {
+.banner-content {
+  margin-top: 16px;
   font-size: 18px;
   line-height: 22px;
   font-weight: bold;
   color: var(--text-white);
+  height: 68px;
 }
-.button__banner {
+.button_banner {
+  float: right;
+  display: block;
   text-decoration: none;
 }
+/*рекламные баннеры главной END*/
 
-
-.ice-cream{}
-
-
-.item-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  list-style: none;
-}
-.item-card {
-  max-width: 267px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  position: relative;
-}
-.item-card__price {
-  font-weight: bold;
-  font-size: 45px;
-  line-height: 41px;
-  text-shadow: var(--text-shadow);
-}
-.item-card__hit-label {
-  background-color: var(--text-white);
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.item-card__description {
-  text-decoration: none;
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: bold;
-  color: var(--text-white);
-}
-.item-card__description-link {
-  text-decoration: none;
-  font-size: 16px;
-  line-height: 22px;
-  color: var(--text-white);
-}
-.item-card__image {
-  border-radius: 50%;
-}
-.item-card__image-link {}
-
-
+/*описание на главной START*/
 .about {
   color: var(--black-main);
   background-image: url("../img/vaffle-pattern.svg");
+  border-radius: 16px;
+  padding: 24px 23px 38px 20px;
 }
 .about__title {
   font-size: 24px;
   line-height: 30px;
+  margin: 0 0 6px 0;
 }
-.about__ice-cream::before {
-  content: url(../img/about-ice.svg);
+.about__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
-.about__natural::before {
-  content: url("../img/about-green.svg");
+.about__item {
+  width: 540px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
 }
-.about__farm::before {
-  content: url("../img/about-cow.svg");
+.about__icon {
+  margin-right: 6px;
 }
-.about__termo::before {
-  content: url("../img/about-termo.svg");
+.about__text {
+  margin: 5px 0px 10px 0;
 }
 
+/*описание на главной END*/
 
+
+/*блог START*/
 .blog {
   display: block;
   background-image: url("../img/strawberry-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
-  max-width: 560px;
+  width: 560px;
+  min-height: 220px;
+  padding: 23px 20px;
 }
 .blog-title {
   color: var(--black-main);
   font-size: 16px;
   line-height: 22px;
+  margin: 0 0 15px 0;
 }
 .blog-text {
   max-width: 287px;
@@ -464,13 +557,16 @@ img {
   line-height: 30px;
   color: var(--black-main);
 }
+/*блог END*/
 
 
+/*рассылка START*/
 .subscribe {
   max-width: 50%;
   background-image: url("../img/subscribe-bg.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  padding: 29px 16px 20px 20px;
 }
 .subscribe-text {
   color: var(--black-main);
@@ -478,6 +574,7 @@ img {
   line-height: 22px;
   display: block;
   width: 512px;
+  margin: 0 0 47px 0;
 }
 .subscribe_button {
   font-size: 18px;
@@ -487,29 +584,57 @@ img {
 }
 .subscribe input[type=email] {
   color: var(--input-grey);
-  min-width: 368px;
-  padding: 10px 204px 10px 14px;
+  width: 368px;
+  padding: 10px 0 10px 14px;
+  margin-right: 6px;
   font-size: 16px;
   line-height: 24px;
-  border-radius: 6px;
+  border-radius: 4px;
 }
+/*рассылка END*/
 
 
+/*контакты START*/
 .contacts {
-  border-radius: 16px;
-  background-color: var(--nude-bg);
+  min-width: 1200px;
+  position: relative;
 }
-.contacts p {
+.contacts__map {
+}
+.contacts__info {
+  width: 303px;
+  min-height: 306px;
+  background-color: var(--text-white);
+  color: var(--black-main);
   font-size: 14px;
   line-height: 20px;
-  color: var(--black-main);
+  border-radius: 16px;
+  position: absolute;
+  z-index: 1;
+  top: 62px;
+  right: 27px;
+  padding: 32px 25px 31px 25px;
 }
-.contacts address,
-.contacts_phone {
+.contacts__adress {
+  margin: 0 0 8px 0;
+}
+.contacts__adress-description {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  display: inline-block;
+}
+.contacts__phone {
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
   color: var(--black-main);
+  text-decoration: none;
+  display: block;
+  margin: 0 0 8px 0;
+}
+.contacts__time {
+  margin: 0 0 31px 0;
 }
 .contacts_button {
   text-decoration: none;
@@ -518,11 +643,15 @@ img {
   line-height: 24px;
   padding: 12px 26px;
 }
+/*контакты END*/
 
 
+/*footer START*/
 .footer-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 18px 0 25px 0;
 }
 .footer-social {}
 .footer-social__list {
@@ -537,10 +666,12 @@ img {
 .footer-social__link {}
 .footer-social__icon {
   display: block;
+  margin-right: 12px;
+  opacity: 0.8;
 }
-
-
-.footer-menu {}
+.footer-social__link:hover .footer-social__icon {
+  opacity: 1;
+}
 .footer-menu__list {
   column-count: 2;
 }
@@ -549,9 +680,13 @@ img {
 }
 .footer-menu__item_heart {
   font-weight: bold;
+  position: relative;
 }
 .footer-menu__item_heart::before {
   content: url("../img/footer-heart-icon.svg");
+  position: absolute;
+  left: -24px;
+  top: 0px;
 }
 .footer-menu__link {
   color: var(--text-white);
@@ -559,12 +694,14 @@ img {
   line-height: 18px;
   text-decoration: none;
 }
-
-
 .footer-author {
   color: var(--text-white);
   font-size: 12px;
   line-height: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 .footer-author__link {
   color: var(--text-white);
@@ -584,4 +721,50 @@ img {
   font-size: inherit;
   line-height: inherit;
 }
+/*footer END*/
 
+
+/*слайдер START*/
+.slider-wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.slider {
+  list-style: none;
+  margin-top: 258px;
+  margin-bottom: 50px;
+}
+.slide {
+  display: none;
+}
+.slide-current {
+  display: block;
+}
+.slide-title {
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 60px;
+  width: 672px;
+  display: block;
+  margin: 0 auto;
+}
+.slider-controls {
+  position: absolute;
+  bottom: 30px;
+  left: 27px;
+  z-index: 20;
+  display: flex;
+  width: 67px;
+  justify-content: space-between;
+}
+.slider-controls button {
+  padding: 0;
+  width: 17px;
+  height: 17px;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+/*слайдер END*/

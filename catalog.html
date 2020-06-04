@@ -25,7 +25,7 @@
             <ul class="main-navigation__list" role="menubar">
               <li class="main-navigation__item" aria-current="page" aria-haspopup="true" tabindex="0">
                 <span class="visually-hidden">Текущий пункт:</span>
-                <a class="main-navigation__item-link button button__navigation" href="#nowhere">Каталог</a>
+                <a class="main-navigation__item-link button button_navigation" href="#nowhere">Каталог</a>
                 <ul class="main-navigation__item main-navigation__submenu" role="menu">
                   <li class="main-navigation__item main-navigation__submenu-item" role="menuitem">
                     <a class="main-navigation__item-link main-navigation__submenu-link" href="#nowhere">Новинки</a>
@@ -60,17 +60,17 @@
                     fill="#fff"/>
                 </svg>
               </button>
-              <button class="nav-button" type="button" aria-label="вход в личный кабинет">
-                <svg class="nav-button_icon" width="20" height="19" xmlns="http://www.w3.org/2000/svg">
+              <button class="button_nav" type="button" aria-label="вход в личный кабинет">
+                <svg class="button-nav_icon" width="20" height="19" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6.04 14.88l6.92-5.38-6.92-5.37v2.91H0v4.92h6.04v2.92z" fill="#fff"/>
                   <path d="M18 0H5a2 2 0 00-2 2v2h2V2h13v15H5v-2H3v2a2 2 0 002 2h13a2 2 0 002-2V2a2 2 0 00-2-2z"
                         fill="#fff"/>
                 </svg>
-                <span class="nav-button_text">Вход</span>
+                <span class="button-nav_text">Вход</span>
               </button>
               <button class="nav-button_cart">
-                <img class="nav-button_icon" src="./img/basket-icon2.svg" alt="корзина с покупками">
-                <span class="nav-button_text">2 товара</span>
+                <img class="button-nav_icon" src="./img/basket-icon2.svg" alt="корзина с покупками">
+                <span class="button-nav_text">2 товара</span>
               </button>
             </div>
           </nav>
@@ -95,12 +95,10 @@
           </div>
         </div>
       </div>
-
     </header>
 
     <div class="main-page">
       <div class="container">
-
         <form action="https://echo.htmlacademy.ru/courses" method="post">
           <fieldset>
             <legend class="visually-hidden">фильтры товара</legend>
@@ -146,124 +144,100 @@
           <h1 class="ice-cream__title">Сливочное мороженое</h1>
           <ul class="item-list">
             <li class="item-card">
-              <span class="item-card__price">310 ₽/кг</span>
-              <a class="item-card__image-link" href="#nowhere">
+              <div class="item-card__main">
                 <img class="item-card__image" src="./img/catalog-1.jpg" width="267" height="267" alt="купить мороженое">
-              </a>
-              <a class="item-card__description-link" href="#nowhere">
-                Сливочное с апельсиновым джемом и цитрусовой стружкой
-              </a>
+                <p class="item-card__price">310 ₽/кг</p>
+                <a class="item-card__link" href="#nowhere">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+                <a href="#nowhere" class="button button_card">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="item-card">
-              <span class="item-card__price">380 ₽/кг</span>
-              <a class="item-card__image-link" href="#nowhere">
+              <div class="item-card__main">
                 <img class="item-card__image" src="./img/catalog-2.jpg" width="267" height="267" alt="купить мороженое">
-              </a>
-              <a class="item-card__description-link" href="#nowhere">
-                Сливочно-кофейное с кусочками шоколада
-              </a>
+                <p class="item-card__price">380 ₽/кг</p>
+                <a class="item-card__link" href="#nowhere">Сливочно-кофейное с кусочками шоколада</a>
+                <a href="#nowhere" class="button button_card">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="item-card">
-              <span class="item-card__price">355 ₽/кг</span>
-              <a class="item-card__image-link" href="#nowhere">
+              <div class="item-card__main">
                 <img class="item-card__image" src="./img/catalog-3.jpg" width="267" height="267" alt="купить мороженое">
-              </a>
-              <a class="item-card__description-link" href="#nowhere">
-                Сливочно-клубничное с присыпкой из белого шоколада
-              </a>
+                <p class="item-card__price">355 ₽/кг</p>
+                <a class="item-card__link" href="#nowhere">Сливочно-клубничное с присыпкой из белого шоколада</a>
+                <a href="#nowhere" class="button button_card">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="item-card">
-              <span class="item-card__price">415 ₽/кг</span>
-              <a class="item-card__image-link" href="#nowhere">
+              <div class="item-card__main">
                 <img class="item-card__image" src="./img/catalog-4.jpg" width="267" height="267" alt="купить мороженое">
-              </a>
-              <a class="item-card__description-link" href="#nowhere">
-                Сливочное крем-брюле с карамельной подливкой
-              </a>
+                <p class="item-card__price">415 ₽/кг</p>
+                <a class="item-card__link" href="#nowhere">Сливочное крем-брюле с карамельной подливкой</a>
+                <a href="#nowhere" class="button button_card">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="item-card">
-              <span class="item-card__price">325 ₽/кг</span>
-              <a class="item-card__image-link" href="#nowhere">
-                <img class="item-card__image" src="./img/catalog-5.jpg" width="267" height="267"
-                     alt="скупить мороженое">
-              </a>
-              <a class="item-card__description-link" href="#nowhere">
-                Сливочное с брусничным джемом
-              </a>
+              <div class="item-card__main">
+                <img class="item-card__image" src="./img/catalog-5.jpg" width="267" height="267" alt="скупить мороженое">
+                <p class="item-card__price">325 ₽/кг</p>
+                <a class="item-card__link" href="#nowhere">Сливочное с брусничным джемом</a>
+                <a href="#nowhere" class="button button_card">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="item-card">
-              <span class="item-card__price">410 ₽/кг</span>
-              <a class="item-card__image-link" href="#nowhere">
+              <div class="item-card__main">
                 <img class="item-card__image" src="./img/catalog-6.jpg" width="267" height="267" alt="купить мороженое">
-              </a>
-              <a class="item-card__description-link" href="#nowhere">
-                Сливочно-черничное с цельными ягодами черники
-              </a>
+                <p class="item-card__price">410 ₽/кг</p>
+                <a class="item-card__link" href="#nowhere">Сливочно-черничное с цельными ягодами черники</a>
+                <a href="#nowhere" class="button button_card">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="item-card">
-              <span class="item-card__price">315 ₽/кг</span>
-              <a class="item-card__image-link" href="#nowhere">
+              <div class="item-card__main">
                 <img class="item-card__image" src="./img/catalog-7.jpg" width="267" height="267" alt="купить мороженое">
-              </a>
-              <a class="item-card__description-link" href="#nowhere">
-                Сливочно-лимонное с карамельной присыпкой
-              </a>
+                <p class="item-card__price">315 ₽/кг</p>
+                <a class="item-card__link" href="#nowhere">Сливочно-лимонное с карамельной присыпкой</a>
+                <a href="#nowhere" class="button button_card">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="item-card">
-              <span class="item-card__price">320 ₽/кг</span>
-              <a class="item-card__image-link" href="#nowhere">
+              <div class="item-card__main">
                 <img class="item-card__image" src="./img/catalog-8.jpg" width="267" height="267" alt="купить мороженое">
-              </a>
-              <a class="item-card__description-link" href="#nowhere">
-                Сливочное с шоколадной стружкой
-              </a>
+                <p class="item-card__price">320 ₽/кг</p>
+                <a class="item-card__link" href="#nowhere">Сливочное с шоколадной стружкой</a>
+                <a href="#nowhere" class="button button_card">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="item-card">
-              <span class="item-card__price">440 ₽/кг</span>
-              <a class="item-card__image-link" href="#nowhere">
+              <div class="item-card__main">
                 <img class="item-card__image" src="./img/catalog-9.jpg" width="267" height="267" alt="купить мороженое">
-              </a>
-              <a class="item-card__description-link" href="#nowhere">
-                <span class="item-card__description">
-                  Сливочно-ванильное с кусочками шоколада
-                </span>
-              </a>
+                <p class="item-card__price">440 ₽/кг</p>
+                <a class="item-card__link" href="#nowhere">Сливочно-ванильное с кусочками шоколада</a>
+                <a href="#nowhere" class="button button_card">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="item-card">
-              <span class="item-card__price">435 ₽/кг</span>
-              <a class="item-card__image-link" href="#nowhere">
-                <img class="item-card__image" src="./img/catalog-10.jpg" width="267" height="267"
-                     alt="купить мороженое">
-              </a>
-              <a class="item-card__description-link" href="#nowhere">
-                <span class="item-card__description">
-                  Сливочноe с ментоловым сиропом
-                </span>
-              </a>
+              <div class="item-card__main">
+                <img class="item-card__image" src="./img/catalog-10.jpg" width="267" height="267" alt="купить мороженое">
+                <p class="item-card__price">435 ₽/кг</p>
+                <a class="item-card__link" href="#nowhere">Сливочноe с ментоловым сиропом</a>
+                <a href="#nowhere" class="button button_card">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="item-card">
-              <span class="item-card__price">355 ₽/кг</span>
-              <a class="item-card__image-link" href="#nowhere">
-                <img class="item-card__image" src="./img/catalog-11.jpg" width="267" height="267"
-                     alt="купить мороженое">
-              </a>
-              <a class="item-card__description-link" href="#nowhere">
-                <span class="item-card__description">
-                  Сливочное с кусочками черного шоколада
-                </span>
-              </a>
+              <div class="item-card__main">
+                <img class="item-card__image" src="./img/catalog-11.jpg" width="267" height="267" alt="купить мороженое">
+                <p class="item-card__price">355 ₽/кг</p>
+                <a class="item-card__link" href="#nowhere">Сливочное с кусочками черного шоколада</a>
+                <a href="#nowhere" class="button button_card">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="item-card">
-              <span class="ice-cream_price">420 ₽/кг</span>
-              <a class="item-card__image-link" href="#nowhere">
-                <img class="item-card__image" src="./img/catalog-12.jpg" width="267" height="267"
-                     alt="купить мороженое">
-              </a>
-              <a class="item-card__description-link" href="#nowhere">
-                <span class="item-card__description">
-                  Сливочное с мятным сиропом
-                </span>
-              </a>
+              <div class="item-card__main">
+                <img class="item-card__image" src="./img/catalog-12.jpg" width="267" height="267" alt="купить мороженое">
+                <p class="item-card__price">420 ₽/кг</p>
+                <a class="item-card__link" href="#nowhere">Сливочное с мятным сиропом</a>
+              <a href="#nowhere" class="button button_card">Быстрый просмотр</a>
+              </div>
             </li>
           </ul>
           <ul class="page-list">

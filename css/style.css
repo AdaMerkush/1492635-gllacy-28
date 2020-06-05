@@ -35,6 +35,7 @@
 }
 
 body {
+  background-color: var(--main-green);
   background-repeat: no-repeat;
   background-position: top center;
   color: var(--text-white);
@@ -258,6 +259,118 @@ img {
 /*разметка основная страница END*/
 
 
+/*фильтры START*/
+.section-filter__title {
+  margin: 8px 0 29px 0;
+}
+.section-filter__field {
+  display: grid;
+  grid-template-areas:
+    'sort   price  fat    fat'
+    'filler filler filler submit';
+  grid-template-columns: 196px 218px 1fr 144px;
+  grid-template-rows: repeat(2, 56px);
+  grid-column-gap: 15px;
+  grid-row-gap: 14px;
+  width: 869px;
+  min-height: 130px;
+  margin: 0;
+  padding: 0;
+}
+.filter-field__sort {
+  grid-area: sort;
+}
+.filter-field__filter-sort {
+  color: var(--text-white);
+  outline: none;
+}
+.filter-field__filter-sort:active {
+  color: var(--black-main);
+}
+.filter-field__price {
+  grid-area: price;
+}
+.filter-field__filter-price {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.filter-field__fat {
+  grid-area: fat;
+}
+.filter-field__fat-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.filter-field__fat-button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  background-image: url("../img/radio-off.svg");
+  margin-right: 11px;
+  outline: none;
+}
+.filter-field__fat-button:checked {
+  background-image: url("../img/radio-on.svg");
+}
+.filter-field__filler {
+  grid-area: filler;
+}
+.filter-field__filler-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.filter-field__filler-check {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 20px;
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  margin-right: 8px;
+  outline: none;
+}
+.filter-field__filler-check:checked {
+  background-image: url("../img/checkbox-on.svg");
+}
+.filter-field__button {
+  grid-area: submit;
+  width: 144px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 20px;
+  margin-top: 27px;
+  color: var(--text-white);
+}
+.filter-name {
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0 0 11px 16px;
+}
+.filter-field__area {
+  background: none;
+  border: none;
+}
+.filter-field__area-input {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 7px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/*фильтры END*/
+
+
 /*кнопки START*/
 .button {
   background-image: var(--button-gradient);
@@ -378,6 +491,7 @@ img {
   row-gap: 40px;
   margin: 0;
   padding: 0;
+  margin-bottom: 80px;
 }
 .item-card {
   height: 320px;
@@ -438,16 +552,46 @@ img {
 /*нумерация страниц каталога START*/
 .page-list {
   list-style: none;
-}
-.page-number {
+  float: right;
+  display: flex;
+  min-width: 194px;
+  justify-content: space-between;
+  align-items: center;
 }
 .page-link {
-  text-decoration: none;
-  font-size: 16px;
-  line-height: 18px;
+  border-radius: 50%;
   color: var(--text-white);
+  display: block;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  text-decoration: none;
+  width: 26px;
+}
+.page-link_current {
+  color: var(--black-main);
+  background-color: var(--text-white);
+}
+.page-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 /*нумерация страниц каталога END*/
+
+
+/*хлебные крошки каталог START*/
+.site-navigation__link {
+  display: block;
+}
+.site-navigation__item {
+  position: relative;
+}
+.site-navigation__item + .site-navigation__item::before  {
+  content: url("../img/bread-points_arrow.svg");
+  position: absolute;
+  left: -14px;
+  top: -4px;
+}
+/*хлебные крошки каталог END*/
 
 
 /*рекламные баннеры главной START*/
@@ -734,6 +878,7 @@ img {
   list-style: none;
   margin-top: 258px;
   margin-bottom: 50px;
+  padding: 0;
 }
 .slide {
   display: none;
@@ -757,6 +902,10 @@ img {
   display: flex;
   width: 67px;
   justify-content: space-between;
+  outline: none;
+}
+.slider-controls .current {
+  background-color: #ffffff;
 }
 .slider-controls button {
   padding: 0;
@@ -766,5 +915,6 @@ img {
   border: 2px solid #ffffff;
   border-radius: 50%;
   cursor: pointer;
+  outline: none;
 }
 /*слайдер END*/

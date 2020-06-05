@@ -96,50 +96,77 @@
         </div>
       </div>
     </header>
-
     <div class="main-page">
       <div class="container">
-        <form action="https://echo.htmlacademy.ru/courses" method="post">
-          <fieldset>
-            <legend class="visually-hidden">фильтры товара</legend>
-            <label for="sort-filter">Сортировка:</label>
-            <div>
-              <select name="sort" id="sort-filter">
-                <option value="popular">по популярности</option>
-                <option value="cheap">сначала недорогие</option>
-                <option value="expensive">сначала дорогие</option>
-                <option value="fat">по жирности</option>
-              </select>
+        <section class="section-filter">
+          <h1 class="section-filter__title">Сливочное мороженое</h1>
+          <form class="section-filter__field" action="https://echo.htmlacademy.ru/courses" method="post">
+            <div class="filter-field__sort">
+              <label class="filter-name" for="sort-filter">Сортировка:</label>
+              <div class="filter-field__area-input">
+                <select class="filter-field__area filter-field__filter-sort" name="sort" id="sort-filter">
+                  <option value="popular">по популярности</option>
+                  <option value="cheap">сначала недорогие</option>
+                  <option value="expensive">сначала дорогие</option>
+                  <option value="fat">по жирности</option>
+                </select>
+              </div>
             </div>
-            <label for="price-filter">Цена: 100 ₽ – 500 ₽</label>
-            <input type="range" name="price" id="price-filter" min="100" max="500" step="10">
-            <div>
-              <p>Жирность:</p>
-              <input name="fat" value="0%" id="zero-fat-filter" type="radio">
-              <label for="zero-fat-filter">0%</label>
-              <input name="fat" value="до 10%" id="10-fat-filter" type="radio" checked>
-              <label for="10-fat-filter">до 10%</label>
-              <input name="fat" value="до 30%" id="30-fat-filter" type="radio">
-              <label for="30-fat-filter">до 30%</label>
-              <input name="fat" value="выше 30%" id="more-fat-filter" type="radio">
-              <label for="more-fat-filter">выше 30%</label>
+            <div class="filter-field__price">
+              <label class="filter-name" for="price-filter">Цена: 100 ₽ – 500 ₽</label>
+              <div class="filter-field__area-input">
+                <input class="filter-field__area filter-field__filter-price" type="range" name="price" id="price-filter" min="100" max="500" step="10">
+              </div>
             </div>
-            <div>
-              <p>Наполнители:</p>
-              <input type="checkbox" name="filler" id="choko-filler-filter" value="choko-filler" checked>
-              <label for="choko-filler-filter">шоколадные</label>
-              <input type="checkbox" name="filler" id="shugar-filler-filter" value="shugar-filler" checked>
-              <label for="shugar-filler-filter">сахарные присыпки</label>
-              <input type="checkbox" name="filler" id="fruit-filler-filter" value="fruit-filler">
-              <label for="fruit-filler-filter">фрукты</label>
-              <input type="checkbox" name="filler" id="sirop-filler-filter" value="sirop-filler">
-              <label for="sirop-filler-filter">сиропы</label>
-              <input type="checkbox" name="filler" id="jam-filler-filter" value="jam-filler">
-              <label for="jam-filler-filter">джем</label>
+            <div class="filter-field__fat">
+              <p class="filter-name">Жирность:</p>
+              <div class="filter-field__area-input">
+                <div class="filter-field__fat-part">
+                  <input class="filter-field__fat-button"  name="fat" value="0%" id="fat-filter-0" type="radio">
+                  <label for="fat-filter-0">0%</label>
+                </div>
+                <div class="filter-field__fat-part">
+                  <input class="filter-field__fat-button"  name="fat" value="до 10%" id="fat-filter-10" type="radio" checked>
+                  <label for="fat-filter-10">до 10%</label>
+                </div>
+                <div class="filter-field__fat-part">
+                  <input class="filter-field__fat-button"  name="fat" value="до 30%" id="fat-filter-30" type="radio">
+                  <label for="fat-filter-30">до 30%</label>
+                </div>
+                <div class="filter-field__fat-part">
+                  <input class="filter-field__fat-button"  name="fat" value="выше 30%" id="fat-filter-more" type="radio">
+                  <label for="fat-filter-more">выше 30%</label>
+                </div>
+              </div>
             </div>
-            <button type="submit">Применить</button>
-          </fieldset>
-        </form>
+            <div class="filter-field__filler">
+              <p class="filter-name">Наполнители:</p>
+              <div class="filter-field__area-input">
+                <div class="filter-field__filler-part">
+                  <input class="filter-field__filler-check" type="checkbox" name="filler" id="choko-filler-filter" value="choko-filler" checked>
+                  <label for="choko-filler-filter">шоколадные</label>
+                </div>
+                <div class="filter-field__filler-part">
+                  <input class="filter-field__filler-check" type="checkbox" name="filler" id="shugar-filler-filter" value="shugar-filler" checked>
+                  <label for="shugar-filler-filter">сахарные присыпки</label>
+                </div>
+                <div class="filter-field__filler-part">
+                  <input class="filter-field__filler-check" type="checkbox" name="filler" id="fruit-filler-filter" value="fruit-filler">
+                  <label for="fruit-filler-filter">фрукты</label>
+                </div>
+                <div class="filter-field__filler-part">
+                  <input class="filter-field__filler-check" type="checkbox" name="filler" id="sirop-filler-filter" value="sirop-filler">
+                  <label for="sirop-filler-filter">сиропы</label>
+                </div>
+                <div class="filter-field__filler-part">
+                  <input class="filter-field__filler-check" type="checkbox" name="filler" id="jam-filler-filter" value="jam-filler">
+                  <label for="jam-filler-filter">джем</label>
+                </div>
+              </div>
+            </div>
+            <button class="filter-field__button" type="submit">Применить</button>
+          </form>
+        </section>
         <main class="ice-cream">
           <h1 class="ice-cream__title">Сливочное мороженое</h1>
           <ul class="item-list">
@@ -241,8 +268,8 @@
             </li>
           </ul>
           <ul class="page-list">
-            <li class="page-number">
-              <a class="page-link">1</a>
+            <li class="page-number page-number_current">
+              <a class="page-link page-link_current">1</a>
             </li>
             <li class="page-number">
               <a class="page-link" href="#nowhere">2</a>

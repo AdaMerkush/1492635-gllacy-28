@@ -48,13 +48,13 @@
               </li>
             </ul>
             <div class="user-navigation">
-              <button class="nav-search" role="button" aria-label="поиск по сайту">
+              <button class="nav-search__button" role="button" aria-label="поиск по сайту">
                 <svg class="nav-search__icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                   <path d="M16 14.665l-4.921-4.932a6.144 6.144 0 00-.994-8.273 6.113 6.113 0 00-8.307.352 6.141 6.141 0 00-.293 8.328 6.11 6.11 0 008.262.937L14.659 16 16 14.665zm-9.918-4.288a4.245 4.245 0 01-3.928-2.63 4.269 4.269 0 01.922-4.643 4.248 4.248 0 014.632-.923 4.253 4.253 0 012.624 3.936 4.274 4.274 0 01-1.247 3.01 4.256 4.256 0 01-3.003 1.25z" fill="#fff"/>
                 </svg>
               </button>
-              <form action="https://echo.htmlacademy.ru/courses" method="get" class="pop-up">
-                <label for="main-search-form" class="visually-hidden"></label>
+              <form class="nav-search__area popup" action="https://echo.htmlacademy.ru/courses" method="get">
+                <label for="main-search-form" class="visually-hidden">поиск по сайту</label>
                 <input type="text" placeholder="Крем-брюле" id="main-search-form" name="mainSearch">
               </form>
               <button class="button_nav" type="button" aria-label="вход в личный кабинет">
@@ -64,17 +64,16 @@
                 </svg>
                 <span class="button-nav_text">Вход</span>
               </button>
-              <form class="pop-up" action="https://echo.htmlacademy.ru/courses" method="get">
-                <fieldset>
-                  <legend class="visually-hidden">поле авторизации</legend>
-                  <label for="main-email-form" class="visually-hidden">Электронная почта</label>
-                  <input type="email" placeholder="email@example.com" id="main-email-form" name="mainEmail">
-                  <label for="main-password-form" class="visually-hidden">Пароль</label>
-                  <input type="password" id="main-password-form" name="mainPassword">
-                  <button type="submit">войти</button>
+              <form class="main-navigation__login-field popup" action="https://echo.htmlacademy.ru/courses" method="get">
+                <label for="main-email-form" class="visually-hidden">Электронная почта</label>
+                <input type="email" placeholder="email@example.com" id="main-email-form" name="mainEmail">
+                <label for="main-password-form" class="visually-hidden">Пароль</label>
+                <input type="password" id="main-password-form" name="mainPassword">
+                <button class="button login-button" type="submit">войти</button>
+                <div class="main-navigation__login-links">
                   <a href="#nowhere">Забыли пароль?</a>
                   <a href="#nowhere">Новая регистрация</a>
-                </fieldset>
+                </div>
               </form>
               <button class="button_nav" type="button" aria-label="корзина с покупками">
                 <svg class="button-nav_icon" width="21" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -99,7 +98,7 @@
             <ul class="slider">
               <li class="slider-item slide slide-current">
                 <h3 class="slide-title">Крем-брюле и пломбир с малиновым джемом</h3>
-                <a class="button button-slider" href="#">Давайте оба!</a>
+                <a class="button button-slider" href="#"">Давайте оба!</a>
               </li>
               <li class="slider-item slide">
                 <h3 class="slide-title">Шоколадный пломбир и лимонный сорбет</h3>
@@ -190,20 +189,20 @@
                   с использованием современного оборудования и проверенных временем технологий.
                 </p>
               </li>
-              <li class="about__item about__green">
-                <img class="about__icon" src="./img/about-green.svg" width="49" height="49" alt="">
-                <p class="about__text">
-                  Для приготовления мороженого используются
-                  настоящие сливки и молоко высочайшего качества.
-                  Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
-                </p>
-              </li>
               <li class="about__item about__cow">
                 <img class="about__icon" src="./img/about-cow.svg" width="49" height="49" alt="">
                 <p class="about__text">
                   Закупка ингредиентов производится
                   только у проверенных фермерских хозяйств и компаний,
                   с которыми нас связывает долговременное сотрудничество.
+                </p>
+              </li>
+              <li class="about__item about__green">
+                <img class="about__icon" src="./img/about-green.svg" width="49" height="49" alt="">
+                <p class="about__text">
+                  Для приготовления мороженого используются
+                  настоящие сливки и молоко высочайшего качества.
+                  Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
                 </p>
               </li>
               <li class="about__item about__termo">
@@ -309,20 +308,19 @@
       </div>
     </footer>
 
-    <section class="pop-up">
+    <section class="call-back popup">
       <form action="https://echo.htmlacademy.ru/courses" method="post">
-        <fieldset>
-          <legend aria-label="поле авторизации и регистрации">Мы обязательно вам ответим!</legend>
+          <h5 class="call-back__title">Мы обязательно вам ответим!</h5>
+          <button class="call-back__reset" type="reset" aria-label="закрыть окно диалога">x</button>
           <label for="contact-field-name" class="visually-hidden">имя и фамилия</label>
           <input type="text" placeholder="Имя Фамилия" id="contact-field-name" name="contactName">
-          <button type="reset" aria-label="закрыть окно диалога">x</button>
           <label for="contact-field-password" class="visually-hidden">пароль</label>
           <input type="email" placeholder="email@example.com" id="contact-field-password" name="contactPassword">
           <label for="contact-text-field" class="visually-hidden">Введите сообщение</label>
           <textarea name="contactWishes" id="contact-text-field" cols="30" rows="10">В свободной форме</textarea>
-          <button type="submit">Отправить</button>
-        </fieldset>
+          <button class="button call-back__button" type="submit">Отправить</button>
       </form>
     </section>
+
   </body>
 </html>

@@ -14,7 +14,7 @@
   <body class="page">
     <header class="page-header">
       <div class="container">
-        <div class="nav-wrapper">
+        <div class="nav-wrapper nav-wrapper_top">
           <div class="header-logo">
             <a class="header-logo__link">
               <img src="./img/logo.svg" width="154" height="64" alt="logo">
@@ -22,33 +22,39 @@
           </div>
           <nav class="main-navigation">
             <ul class="main-navigation__list" role="menubar">
-              <li class="main-navigation__item" aria-current="page" aria-haspopup="true" tabindex="0">
+              <li class="main-navigation__item main-navigation__item_current" aria-current="page" aria-haspopup="true" tabindex="0">
                 <span class="visually-hidden">Текущий пункт:</span>
-                <a class="main-navigation__item-link button button_navigation" href="#nowhere">Каталог</a>
-                <ul class="main-navigation__item main-navigation__submenu" role="menu">
-                  <li class="main-navigation__item main-navigation__submenu-item" role="menuitem">
-                    <a class="main-navigation__item-link main-navigation__submenu-link" href="#nowhere">Новинки</a>
+                <a class="main-navigation__item-link main-navigation__item-link_current" href="#nowhere">
+                  <span>Каталог</span>
+                </a>
+                <ul class="main-navigation__submenu" role="menu">
+                  <li class="main-navigation__submenu-item" role="menuitem">
+                    <a class="main-navigation__submenu-link" href="#nowhere">Новинки</a>
                   </li>
-                  <li class="main-navigation__item main-navigation__submenu-item" role="menuitem">
-                    <a class="main-navigation__item-link main-navigation__submenu-link">Сливочное</a>
+                  <li class="main-navigation__submenu-item" role="menuitem">
+                    <a class="main-navigation__submenu-link">Сливочное</a>
                   </li>
-                  <li class="main-navigation__item main-navigation__submenu-item" role="menuitem">
-                    <a class="main-navigation__item-link main-navigation__submenu-link" href="#nowhere">Щербеты</a>
+                  <li class="main-navigation__submenu-item" role="menuitem">
+                    <a class="main-navigation__submenu-link" href="#nowhere">Щербеты</a>
                   </li>
-                  <li class="main-navigation__item main-navigation__submenu-item" role="menuitem">
-                    <a class="main-navigation__item-link main-navigation__submenu-link" href="#nowhere">Фруктовый
+                  <li class="main-navigation__submenu-item" role="menuitem">
+                    <a class="main-navigation__submenu-link" href="#nowhere">Фруктовый
                       лед</a>
                   </li>
-                  <li class="main-navigation__item main-navigation__submenu-item" role="menuitem">
-                    <a class="main-navigation__item-link main-navigation__submenu-link" href="#nowhere">Мелорин</a>
+                  <li class="main-navigation__submenu-item" role="menuitem">
+                    <a class="main-navigation__submenu-link" href="#nowhere">Мелорин</a>
                   </li>
                 </ul>
               </li>
               <li class="main-navigation__item" role="menuitem">
-                <a class="main-navigation__item-link" href="#nowhere">Доставка и оплата</a>
+                <a class="main-navigation__item-link" href="#nowhere">
+                  <span>Доставка и оплата</span>
+                </a>
               </li>
               <li class="main-navigation__item" role="menuitem">
-                <a class="main-navigation__item-link" href="#nowhere">О компании</a>
+                <a class="main-navigation__item-link" href="#nowhere">
+                  <span>О компании</span>
+                </a>
               </li>
             </ul>
             <div class="user-navigation">
@@ -74,7 +80,7 @@
             </div>
           </nav>
         </div>
-        <div class="nav-wrapper">
+        <div class="nav-wrapper nav-wrapper_bottom">
           <div class="site-navigation">
             <ul class="site-navigation__list">
               <li class="site-navigation__item">
@@ -114,7 +120,12 @@
             <div class="filter-field__price">
               <label class="filter-name" for="price-filter">Цена: 100 ₽ – 500 ₽</label>
               <div class="filter-field__area-input">
-                <input class="filter-field__area filter-field__filter-price" type="range" name="price" id="price-filter" min="100" max="500" step="10">
+                <input class="filter-field__area visually-hidden" type="range" name="price" id="price-filter" min="100" max="500" step="10">
+                <div class="filter-field__area filter-field__filter-price">
+                  <div class="fiter-sort__main-line">
+                    <div class="fiter-sort__high-line"></div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="filter-field__fat">
@@ -167,7 +178,7 @@
           </form>
         </section>
         <main class="ice-cream">
-          <h1 class="ice-cream__title">Сливочное мороженое</h1>
+          <h2 class="ice-cream__title visually-hidden">Сливочное мороженое</h2>
           <ul class="item-list">
             <li class="item-card">
               <div class="item-card__main">
@@ -180,7 +191,7 @@
             <li class="item-card">
               <div class="item-card__main">
                 <img class="item-card__image" src="./img/catalog-2.jpg" width="267" height="267" alt="купить мороженое">
-                <p class="item-card__price">380 ₽/кг</p>
+                <p class="item-card__price">380 ₽<small>/кг</small></p>
                 <a class="item-card__link" href="#nowhere">Сливочно-кофейное с кусочками шоколада</a>
                 <a href="#nowhere" class="button button_card">Быстрый просмотр</a>
               </div>
@@ -188,15 +199,15 @@
             <li class="item-card">
               <div class="item-card__main">
                 <img class="item-card__image" src="./img/catalog-3.jpg" width="267" height="267" alt="купить мороженое">
-                <p class="item-card__price">355 ₽/кг</p>
-                <a class="item-card__link" href="#nowhere">Сливочно-клубничное с присыпкой из белого шоколада</a>
+                <p class="item-card__price">355 ₽<small>/кг</small></p>
+                <a class="item-card__link" href="#nowhere">Сливочно-клубничное с <br> присыпкой из белого шоколада</a>
                 <a href="#nowhere" class="button button_card">Быстрый просмотр</a>
               </div>
             </li>
             <li class="item-card">
               <div class="item-card__main">
                 <img class="item-card__image" src="./img/catalog-4.jpg" width="267" height="267" alt="купить мороженое">
-                <p class="item-card__price">415 ₽/кг</p>
+                <p class="item-card__price">415 ₽<small>/кг</small></p>
                 <a class="item-card__link" href="#nowhere">Сливочное крем-брюле с карамельной подливкой</a>
                 <a href="#nowhere" class="button button_card">Быстрый просмотр</a>
               </div>
@@ -204,15 +215,15 @@
             <li class="item-card">
               <div class="item-card__main">
                 <img class="item-card__image" src="./img/catalog-5.jpg" width="267" height="267" alt="скупить мороженое">
-                <p class="item-card__price">325 ₽/кг</p>
-                <a class="item-card__link" href="#nowhere">Сливочное с брусничным джемом</a>
+                <p class="item-card__price">325 ₽<small>/кг</small></p>
+                <a class="item-card__link" href="#nowhere">Сливочное с брусничным <br> джемом</a>
                 <a href="#nowhere" class="button button_card">Быстрый просмотр</a>
               </div>
             </li>
             <li class="item-card">
               <div class="item-card__main">
                 <img class="item-card__image" src="./img/catalog-6.jpg" width="267" height="267" alt="купить мороженое">
-                <p class="item-card__price">410 ₽/кг</p>
+                <p class="item-card__price">410 ₽<small>/кг</small></p>
                 <a class="item-card__link" href="#nowhere">Сливочно-черничное с цельными ягодами черники</a>
                 <a href="#nowhere" class="button button_card">Быстрый просмотр</a>
               </div>
@@ -220,7 +231,7 @@
             <li class="item-card">
               <div class="item-card__main">
                 <img class="item-card__image" src="./img/catalog-7.jpg" width="267" height="267" alt="купить мороженое">
-                <p class="item-card__price">315 ₽/кг</p>
+                <p class="item-card__price">315 ₽<small>/кг</small></p>
                 <a class="item-card__link" href="#nowhere">Сливочно-лимонное с карамельной присыпкой</a>
                 <a href="#nowhere" class="button button_card">Быстрый просмотр</a>
               </div>
@@ -228,7 +239,7 @@
             <li class="item-card">
               <div class="item-card__main">
                 <img class="item-card__image" src="./img/catalog-8.jpg" width="267" height="267" alt="купить мороженое">
-                <p class="item-card__price">320 ₽/кг</p>
+                <p class="item-card__price">320 ₽<small>/кг</small></p>
                 <a class="item-card__link" href="#nowhere">Сливочное с шоколадной стружкой</a>
                 <a href="#nowhere" class="button button_card">Быстрый просмотр</a>
               </div>
@@ -236,23 +247,23 @@
             <li class="item-card">
               <div class="item-card__main">
                 <img class="item-card__image" src="./img/catalog-9.jpg" width="267" height="267" alt="купить мороженое">
-                <p class="item-card__price">440 ₽/кг</p>
-                <a class="item-card__link" href="#nowhere">Сливочно-ванильное с кусочками шоколада</a>
+                <p class="item-card__price">440 ₽<small>/кг</small></p>
+                <a class="item-card__link" href="#nowhere">Сливочно-ванильное <br> с кусочками шоколада</a>
                 <a href="#nowhere" class="button button_card">Быстрый просмотр</a>
               </div>
             </li>
             <li class="item-card">
               <div class="item-card__main">
                 <img class="item-card__image" src="./img/catalog-10.jpg" width="267" height="267" alt="купить мороженое">
-                <p class="item-card__price">435 ₽/кг</p>
-                <a class="item-card__link" href="#nowhere">Сливочноe с ментоловым сиропом</a>
+                <p class="item-card__price">435 ₽<small>/кг</small></p>
+                <a class="item-card__link" href="#nowhere">Сливочноe с ментоловым <br> сиропом</a>
                 <a href="#nowhere" class="button button_card">Быстрый просмотр</a>
               </div>
             </li>
             <li class="item-card">
               <div class="item-card__main">
                 <img class="item-card__image" src="./img/catalog-11.jpg" width="267" height="267" alt="купить мороженое">
-                <p class="item-card__price">355 ₽/кг</p>
+                <p class="item-card__price">355 ₽<small>/кг</small></p>
                 <a class="item-card__link" href="#nowhere">Сливочное с кусочками черного шоколада</a>
                 <a href="#nowhere" class="button button_card">Быстрый просмотр</a>
               </div>
@@ -260,13 +271,18 @@
             <li class="item-card">
               <div class="item-card__main">
                 <img class="item-card__image" src="./img/catalog-12.jpg" width="267" height="267" alt="купить мороженое">
-                <p class="item-card__price">420 ₽/кг</p>
+                <p class="item-card__price">420 ₽<small>/кг</small></p>
                 <a class="item-card__link" href="#nowhere">Сливочное с мятным сиропом</a>
               <a href="#nowhere" class="button button_card">Быстрый просмотр</a>
               </div>
             </li>
           </ul>
           <ul class="page-list">
+            <li class="page-number page-arrow_disable">
+              <a class="page-link" href="#nowhere" aria-label="переход на предыдущую страницу">
+                <img src="./img/icon-left-small.svg" alt="">
+              </a>
+            </li>
             <li class="page-number page-number_current">
               <a class="page-link page-link_current">1</a>
             </li>
@@ -282,7 +298,7 @@
             <li class="page-number">
               <a class="page-link" href="#nowhere">5</a>
             </li>
-            <li class="page-number">
+            <li class="page-number page-arrow_active">
               <a class="page-link" href="#nowhere" aria-label="переход на следующую страницу">
                 <img src="./img/catalog-arrow.svg" alt="">
               </a>
@@ -320,18 +336,22 @@
           </div>
           <nav class="footer-menu">
             <ul class="footer-menu__list">
-              <li class="footer-menu__item footer-menu__item_heart">
-                <a class="footer-menu__link" href="#nowhere">Для поставщиков</a>
-              </li>
-              <li class="footer-menu__item">
-                <a class="footer-menu__link" href="#nowhere">О производстве</a>
-              </li>
-              <li class="footer-menu__item">
-                <a class="footer-menu__link" href="#nowhere">Наши документы</a>
-              </li>
-              <li class="footer-menu__item">
-                <a class="footer-menu__link" href="#nowhere">Экологические стандарты</a>
-              </li>
+              <div class="list__column_left">
+                <li class="footer-menu__item footer-menu__item_heart">
+                  <a class="footer-menu__link" href="#nowhere">Для поставщиков</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a class="footer-menu__link" href="#nowhere">О производстве</a>
+                </li>
+              </div>
+              <div class="list__column_right">
+                <li class="footer-menu__item">
+                  <a class="footer-menu__link" href="#nowhere">Наши документы</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a class="footer-menu__link" href="#nowhere">Экологические стандарты</a>
+                </li>
+              </div>
             </ul>
           </nav>
           <div class="footer-author">

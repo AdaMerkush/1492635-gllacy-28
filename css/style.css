@@ -41,7 +41,7 @@
 }
 
 body {
-  font-family: Roboto, "Open Sans", sans-serif;
+  font-family: Roboto, "Arial Narrow", Arial, sans-serif;
   font-style: normal;
   font-size: 16px;
 }
@@ -1420,7 +1420,8 @@ img {
   height: 44px;
   margin: 8px auto 0 auto;
   opacity: 0;
-  padding: 12px 16px;
+  padding: 10px 16px 14px 16px;
+  transform: translateX(-1px);
   width: 200px;
 }
 .products-item:hover .products-item__button {
@@ -1474,7 +1475,7 @@ img {
 }
 .contacts__title {}
 .contacts__map {
-  background: url("../img/map.jpg") 50% 50% no-repeat;
+  background: url("../img/map.jpg") 50% 50% / cover no-repeat;
   height: 430px;
   width: 100%;
 }
@@ -1483,11 +1484,11 @@ img {
   border-radius: 16px;
   color: var(--black-main);
   font-size: 14px;
+  left: calc(50% + 270px);
   line-height: 20px;
   min-height: 306px;
   padding: 29px 25px 18px 25px;
   position: absolute;
-  right: 27px;
   top: 62px;
   width: 303px;
 }

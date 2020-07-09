@@ -1196,10 +1196,10 @@ img {
   content: '';
   height: 966px;
   left: 50%;
+  max-width: 1400px;
   position: absolute;
   top: -78px;
   transform: translateX(-50%);
-  width: 1400px;
   z-index: -1;
 }
 .slider-item__image {

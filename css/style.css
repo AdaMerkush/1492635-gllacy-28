@@ -11,6 +11,8 @@
   --rose-extralight: #FBDED7;
   --rose-light: #FFBC9E;
   --rose-normal: #F6B5A5;
+  --mulberry: #B65488;
+  --saddle-brown: #8B4513;
   --rose-dark: #E84D37;
   --rose-extradark: #D07058;
   --black-link: #323232;
@@ -1268,9 +1270,11 @@ img {
   z-index: 10;
 }
 .banners-item_raspberry {
+  background-color: var(--mulberry);
   background-image: url("../img/promo-berry.jpg");
 }
 .banners-item_chocolate {
+  background-color: var(--saddle-brown);
   background-image: url("../img/promo-choko.jpg");
 }
 .banners-item__title {
